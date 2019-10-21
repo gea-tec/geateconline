@@ -1,0 +1,162 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+display_url: https://geatec.netlify.com
+logo_url: https://geatec.netlify.com/images/logo.svg
+
+collections:
+
+  - name: "home"
+    label: "Página de Inicio"
+    folder: "content/editablepages"
+    create: false
+    delete: false
+    filter: {field: "series", value: "home"}
+    slug: "{{series}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - label: "Areas de especialidad"
+        name: "areas"
+        widget: "list"
+        field: {label: area, name: string, widget: string}
+      - {label: "Título de Acerca de Nosotros", name: "aboutTitle", widget: "string", default: "Quiénes somos?", required: true}
+      - {label: "Acerca de Nosotros", name: "aboutContent", widget: "markdown"}
+      - {label: "Título de Servicios", name: "servicesTitle", widget: "string", default: "NUESTROS SERVICIOS", required: true}
+      - {label: "Nuestros servicios", name: "servicesContent", widget: "markdown"}
+      - {label: "Series", name: "series", widget: "hidden", default: "home"}
+
+  - name: "bannerslider"
+    label: "Slider de Banner"
+    folder: "content/bannerslider"
+    create: false
+    delete: false
+    filter: {field: "series", value: "bannerslider"}
+    slug: "{{series}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - {label: "Tìtulo", name: "title", widget: "string", default: "Slider de Banner"}
+      - label: "Galleria"
+        name: "galleryImages"
+        widget: "list"
+        field: {label: (Tamaño de imágenes recomendado 675x300), name: image, widget: image}
+      - {label: "Series", name: "series", widget: "hidden", default: "bannerslider"}
+
+
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Tìtulo", name: "title", widget: "string", required: true}
+      - {label: "Fecha de Publicaciòn", name: "date", widget: "datetime"}
+      - {label: "Descripciòn", name: "description", widget: "string"}
+      - {label: "Imagen de Muestra", name: "image", widget: "image"}
+      - {label: "Imagen de Portada", name: "thumbnail", widget: "image"}
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Texto", name: "body", widget: "markdown"}
+      - {label: "Series", name: "series", widget: "hidden", default: "blog"}
+
+  - name: "users"
+    label: "Usuarios"
+    folder: "content/users"
+    create: true
+    filter: {field: "series", value: "users"}
+    slug: "{{series}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - {label: "Nombre", name: "title", widget: "string", required: true}
+      - {label: "Link", name: "link", widget: "string", required: true}
+      - {label: "Descripcion Adicional", name: "description", widget: "string", required: false}
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Usuarios", name: "series", widget: "hidden", default: "users"}
+
+  - name: "asfalto"
+    label: "Laboratorio: Asfalto"
+    folder: "content/asfalto"
+    create: true
+    filter: {field: "series", value: "asfalto"}
+    preview_path: "/lab/"
+    slug: "{{series}}-{{year}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Nombre", name: "title", widget: "string", required: true}
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Imagen de Muestra", name: "image", widget: "image", default: "/images/uploads/blank.jpg"}
+      - {label: "Descripcion (tomar en cuenta limite de palabras)", name: "body", widget: "markdown", required: true}
+      - {label: "Laboratorio", name: "series", widget: "hidden", default: "asfalto"}
+
+  - name: "suelos"
+    label: "Laboratorio: Suelos"
+    folder: "content/suelos"
+    create: true
+    filter: {field: "series", value: "suelos"}
+    preview_path: "/lab/"
+    slug: "{{series}}-{{year}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Nombre", name: "title", widget: "string", required: true}
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Imagen de Muestra", name: "image", widget: "image", default: "/images/uploads/blank.jpg"}
+      - {label: "Descripcion (tomar en cuenta limite de palabras)", name: "body", widget: "markdown", required: true}
+      - {label: "Laboratorio", name: "series", widget: "hidden", default: "suelos"}
+
+  - name: "hormigones"
+    label: "Laboratorio: Hormigones"
+    folder: "content/hormigones"
+    create: true
+    filter: {field: "series", value: "hormigones"}
+    preview_path: "/lab/"
+    slug: "{{series}}-{{year}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Nombre", name: "title", widget: "string", required: true}
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Imagen de Muestra", name: "image", widget: "image", default: "/images/uploads/blank.jpg"}
+      - {label: "Descripcion (tomar en cuenta limite de caracteres = 325)", name: "body", widget: "markdown", required: true}
+      - {label: "Laboratorio", name: "series", widget: "hidden", default: "hormigones"}
+
+  - name: "estudiosuelos"
+    label: "Estudio de Suelos: Servicios"
+    folder: "content/estudiosuelos"
+    create: true
+    filter: {field: "series", value: "estudios"}
+    preview_path: "/suelos/"
+    slug: "{{series}}-{{year}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Nombre", name: "title", widget: "string", required: true}
+      - label: "Imágenes"
+        name: "galleryImages"
+        widget: "list"
+        field: {label: Imágenes de muestra del servicio, name: image, widget: image}
+      - {label: "Descripcion", name: "body", widget: "markdown", required: true}
+      - label: "Objetivos"
+        name: "objectives"
+        widget: "list"
+        field: {label: Objetivo, name: string, widget: string}
+      - label: "Afiliaciones"
+        name: "afiliateImages"
+        widget: "list"
+        field: {label: (Se recomienda usar iconos con fondo transparente y de color "#4d4d4d"), name: image, widget: image}
+      - {label: "Estudios", name: "series", widget: "hidden", default: "estudios"}
+      
+      

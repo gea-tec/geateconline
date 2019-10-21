@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administracion GEATEC</title>
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+</head>
+<body>
+    
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    var myVar = setInterval(content, 5000)
+
+    function content() {
+
+      // 1. Translating top bar
+      var navCms = document.getElementsByClassName("ei6fm2r1");
+      var content = navCms[0].nextSibling;
+      var workflow = navCms[1].nextSibling;
+      var media = navCms[2].nextSibling;
+      var quickAddCont = document.getElementsByClassName("e16dayda3");
+      var collections = document.getElementsByClassName("el9l68m1");
+      var searchBar = document.getElementsByClassName("el9l68m3");
+
+
+        content.textContent = "Contenido";
+        workflow.textContent = "Flujo de Trabajo";
+        media.textContent = "Medios";
+        // 1.1 Quick add
+        
+        quickAddCont[0].textContent = "Crear Nuevo";
+        // 2. Sidebar
+          //2.1 Collections
+          
+          collections[0].textContent = "Categorías";
+          //2.2 Search bar text 
+          
+          searchBar[0].placeholder = "Buscar";
+          console.log("running");
+      
+
+      
+    }
+    
+    function stopFunction() {
+      clearInterval(myVar);
+    }
+  </script>
+  <script>
+    var LabPreview = createClass({
+    render: function() {
+      var entry = this.props.entry;
+      var image = entry.getIn(['data', 'image']);
+      var bg = this.props.getAsset(image);
+      return h('div', {"className": "lab-service-father"},
+              h('div', {"className": "lab-service"},
+                h('div', {"className": "lab-service-img"},
+                h('img', {src: bg.toString()},
+                )),
+                h('div', {"className": "lab-service-text"},
+                h('h3', {"className": "lab-service-text-h3"},entry.getIn(['data', 'title'])),
+                h('p', {"className": "lab-service-text-p"},this.props.widgetFor('body'))
+                
+                )
+          
+              ));
+      }
+    });
+
+    
+    CMS.registerPreviewStyle("/css/component.css");
+    CMS.registerPreviewTemplate("hormigones", LabPreview);
+    CMS.registerPreviewTemplate("suelos", LabPreview);
+    CMS.registerPreviewTemplate("asfalto", LabPreview);
+    </script>
+</body>
+</html>

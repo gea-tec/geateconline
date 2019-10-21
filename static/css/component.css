@@ -1,0 +1,84 @@
+.lab-service-father {
+    width: 570px;
+    height: 220px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    padding: 10px;
+    background: #fff;
+}
+
+.lab-service {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.lab-service-img {
+    width: 50%;
+    height: 100%;
+    background: #00941f;
+    position: relative;
+}
+
+.lab-service-img::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background: rgba(0, 148, 32, 0.5);
+}
+
+.lab-service-img::before {
+    content: '';
+    width: 44px;
+    height: 40px;
+    position: absolute;
+    background: url(/images/geatecwhite.svg);
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.lab-service-img img {
+    width: 275px;
+    height: 200px;
+    z-index: 997;
+}
+
+.lab-service-text {
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 50%;
+}
+
+.lab-service-text-h3 {
+    margin: 0 0 10px 0;
+    font-family: Proxima Nova;
+    font-size: 1.17em;
+}
+
+.lab-service-text-p {
+    font-size: 0.9em;
+    font-family: Lato;
+}
