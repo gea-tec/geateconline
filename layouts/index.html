@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147433925-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147433925-2');
+    </script>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "home*" }} 
+    {{ range $reusablePages }}
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="GEATEC Suelos y Hormigones" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/swiper.min.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/font-awesome.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/aos.min.css" | relURL}}" />
+    
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <title>
+        {{.Params.title }}
+    </title>
+    {{ end }}
+    <!-- include the widget -->
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <noscript>
+        <style>
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+            #preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
+  </head>
+  <body>
+   <!-- ***** Preloader Start ***** -->
+   {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
+      <div class="root home bstrtch">
+      <!-- ***** Preloader Start ***** -->
+      <!-- start of fade cover  -->
+      <div class="fade-cover">
+            
+      </div>
+      <!-- End of fade cover -->
+      <!-- some header -->
+      <!-- {{ block "header" . }}{{ partial "home-header.html" .}}{{ end }} -->
+
+    <main>
+<!-- Start of cover -->
+<section class="cover">
+        <header>
+                <!-- Start of entire header -->
+                <section class="header-container">
+                    <section class="main-header mh1">
+                        <p class="logo">
+                            <a href="./">
+                                <img src="images/logo2.svg" alt="Logo Geatec">
+                                <img class="change-on-resize"src="images/logo.svg" alt="Logo Geatec">
+                            </a>
+                        </p>  
+                        <div>
+                            <button class="hamburger hamburger--collapse" type="button">
+                                <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                            <div class="animated-social  header-social">
+                                    <a class="btn-social" href="#">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn-social" href="#">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn-social" href="#">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                            </div>
+                            <section id="navFullsize" class="nav-container">
+                                <nav>
+                                    <ul>
+                                        <li class="current-menu-item"><a href="/">Inicio</a></li>
+                                        <li class="sub-menu">
+                                            <a id="sub" href="#">Servicios</a>
+                                            <ul id="sub-menu-ul">
+                                                <li><a href="/suelos/">Estudio de Suelos</a></li>
+                                                <li><a href="/lab/">Laboratorio</a></li>
+                                                <li><a href="/consultoria/">Consultoría</a></li>
+                                                <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="/clients/">Acceso Clientes</a></li>
+                                        <li><a href="/contact/">Contacto</a></li>
+                                    </ul>
+                                </nav>
+                            </section>
+                        </div>
+                    </section>
+                    
+                </section>
+                <!-- End of entire header -->
+            </header>
+            <section class="mobile-nav">
+                <nav>
+                    <ul>
+                        <li class="current-menu-item" ><a href="#">Inicio</a></li>
+                        <li id="mobile-sub-parent">
+                            <a href="#">Servicios</a>
+                            <ul id="mobile-sub">
+                                    <li><a href="">Estudio de Suelos</a></li>
+                                    <li><a href="/lab/">Laboratorio</a></li>
+                                    <li><a href="">Consultoría</a></li>
+                                    <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="/clients/">Acceso Clientes</a></li>
+                        <li><a href="/contact/">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="animated-social">
+                        <a class="btn-social" href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn-social" href="#">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn-social" href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </div>
+            </section>
+    <div class="head">
+        <div class="head-content">
+            <!-- Start of text with swiper -->
+            <div class="head-text">
+                    <h1 class="ml11">
+                            <span class="text-wrapper">
+                              <span class="letters">SOMOS ESPECIALISTAS EN</span>
+                            </span>
+                          </h1>
+                <div class="swiper-container s1">
+                    <div class="swiper-wrapper">
+                        {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "home*" }} 
+                        {{ range $reusablePages }}
+                        {{ range .Params.areas }}
+                        <div class="swiper-slide">
+                            <div class="slide1-content"><h1>{{ . }}</h1></div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="small-features">
+                    <div><img src="images/check-circle.svg" alt="check circle">Calidad Asegurada</div>
+                    <div><img src="images/atom.svg" alt="atom">Tecnología de Punta</div>
+                    <div><img src="images/worker.svg" alt="trabajador">Profesionales Altamente Capacitados</div>
+                </div>
+                <div class="wrapper">
+                        <a class="cta" href="#">
+                          <span>EMPEZAR</span>
+                          <span>
+                            <svg width="25px" height="12px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                                <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                                <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                              </g>
+                            </svg>
+                          </span> 
+                        </a>
+                      </div>
+            </div>
+            <!-- End of text with swiper -->
+
+            <!-- Start of contact form container -->
+            
+            <section class="form1-container">
+                 <div class="animated-social no-display">
+                    <a class="btn-social" href="#">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn-social" href="#">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn-social" href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>                        
+                <div class="form1" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <h3>SOLICITA UNA COTIZACIÓN GRATIS</h3>
+                    <p>Llena el formulario a continuación y estaremos en contacto en breve</p>
+                    <!-- start of form -->
+                    <form method="POST" data-netlify="true" class="contact-form">
+
+                        <input name="name" placeholder="NOMBRE COMPLETO" required>
+
+                        <input name="phone" type="tel" placeholder="TELÉFONO" required>
+            
+                        <input name="email" type="email" placeholder="EMAIL" required>
+        
+                        <select id ="topicList" name="theme" size="1">
+            
+                            <option value="URG Contacto Web">TIPO DE SOLICITUD</option> 
+    
+                            <option value = "URG Cotizacion">Cotizaci&oacute;n</option>
+    
+                            <option value = "URG Informacion">Informaci&oacute;n general</option>
+
+                        </select>
+                        
+                        <textarea name="message" placeholder="DESCRIPCIÓN"></textarea>
+                        <div class="btn1">
+                            <input id="submit1" name="submit" type="submit" value="ENVIAR">
+                        </div>
+                    </form>
+                    <!-- end of form -->
+                </div>
+            </section>
+            
+            <!-- End of contact form -->
+        </div>
+    </div>
+</section>
+<!-- End of cover -->
+<section class="form2">
+    <div class="form1" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+        <h3>SOLICITA UNA COTIZACIÓN GRATIS</h3>
+        <p>Llena el formulario a continuación y estaremos en contacto en breve</p>
+    <!-- start of form2-->
+        <form method="POST" data-netlify="true" class="contact-form">
+
+            <input name="name" placeholder="NOMBRE COMPLETO" required>
+
+            <input name="phone" type="tel" placeholder="TELÉFONO" required>
+
+            <input name="email" type="email" placeholder="EMAIL" required>
+
+            <select id ="topicList" name="theme" size="1">
+
+                <option value="URG Contacto Web">TIPO DE SOLICITUD</option> 
+
+                <option value = "URG Cotizacion">Cotizaci&oacute;n</option>
+
+                <option value = "URG Informacion">Informaci&oacute;n general</option>
+
+            </select>
+            
+            <textarea name="message" placeholder="DESCRIPCIÓN"></textarea>
+            <div class="btn1">
+                <input id="submit1" name="submit" type="submit" value="ENVIAR">
+            </div>
+        </form>
+    <!-- end of form -->
+    </div>
+</section>
+{{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "home*" }} 
+    {{ range $reusablePages }}
+
+<!-- Begginnin of about us -->
+<section class="about content">
+    <div class="section-title">
+        <h3><span>{{.Params.aboutTitle }}</span></h3>
+    </div>
+    <div class="section-text">
+        <p>{{.Params.aboutContent | markdownify }}</p>
+    </div>
+</section>
+
+<!-- End of about us -->
+
+<!-- Start of services -->
+
+<section class="services content background-fixed">
+
+    <div class="section-title">
+        <h3><span>{{.Params.servicesTitle }}</span></h3>
+    </div>
+
+    <div class="section-text">
+        <p>{{.Params.servicesContent | markdownify }}</p>
+    </div>
+    {{ end }}
+    <div class="services-container">
+        <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="card" >
+                <div class="card-front">
+                    <img src="images/suelos.svg" alt="estudio de suelos">
+                    <h2>ESTUDIO DE SUELOS</h2>
+                </div>
+                <div class="card-back back1">
+                    <button class="btn3">
+                        CONOCER MÁS
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="images/lab.svg" alt="laboratorio">
+                        <h2>LABORATORIO</h2>
+                    </div>
+                    <div class="card-back back2">
+                        <a href="/lab/">
+                            <button class="btn3">
+                                CONOCER MÁS
+                            </button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="images/inspection.svg" alt="fiscalizacion">
+                        <h2>FISCALIZACIÓN</h2>
+                    </div>
+                    <div class="card-back back3">
+                        <a href="/fiscalizacion/">
+                            <button class="btn3">
+                                CONOCER MÁS
+                            </button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <div class="service-card" data-aos="zoom-in" data-aos-duration="1000">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="images/consulting.svg" alt="consultoria y diseño">
+                        <h2>CONSULTORÍA</h2>
+                    </div>
+                    <div class="card-back back4">
+                        <button class="btn3">
+                            CONOCER MÁS
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- End of services -->
+
+<!-- Start of certifications -->
+<section class="certifications content">
+    <div class="section-title">
+        <h3><span>CALIDAD ASEGURADA POR</span></h3>
+    </div>
+    <div class="certificates-container" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out" data-aos-duration="1000">
+        <img src="/images/aci.svg" alt="american concrete institute" class="certificate">
+        <img src="/images/asce.svg" alt="american society of civil engineers" class="certificate">
+        <img src="/images/iso.svg" alt="iso" class="certificate">
+        <img src="/images/astm.svg" alt="astm international" class="certificate">
+        <img src="/images/nec.svg" alt="norma ecuatoriana de la construccion" class="certificate">
+        <img src="/images/inen.svg" alt="instituto ecuatoriana de normalizacion" class="certificate">
+    </div>
+</section>
+<!-- End of certifications -->
+
+<!-- Double banner -->
+<section class="full-width">
+    <div class="double-banner banner1">
+        <div class="slogan">
+            <h1 data-aos="fade-up" data-aos-duration="600">Reputación <strong style="color: #4d4d4d;">sólida</strong> como el <strong style="color: #4d4d4d;">concreto</strong></h1>
+            <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><button class="btn4" >REVISA NUESTROS PRECIOS</button></div>
+        </div>
+        <div class="picture" data-aos="fade-left" data-aos-duration="600">
+            {{ $headless := .Site.GetPage "/bannerslider" }}
+                    {{ $reusablePages := $headless.Resources.Match "bannerslider*" }} 
+                    {{ range $reusablePages }}
+                        {{ range .Params.galleryImages }}
+                        <div class="picture-slides" style="display: none;">{{ . }}</div>
+                        {{ end }}
+                    {{ end }}
+            <figure class="hoverbtn">
+
+                
+            <figcaption>
+                <h3>CONTÁCTANOS</h3>
+                </figcaption>
+                <a href="#"></a>
+              </figure>
+        </div>
+    </div>
+    
+</section>
+<!-- End of double banner -->
+{{ block "blogentries" . }}{{ partial "blog-entries.html" .}}{{ end }}
+<section class="full-width">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1390.1848170603428!2d-77.81045166199002!3d-0.9846385972673649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-0.9938300999999999!2d-77.81494529999999!4m3!3m2!1d-0.9841302!2d-77.8102086!5e0!3m2!1sen!2sec!4v1570006029076!5m2!1sen!2sec" width="760" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</section>
+        
+    
+    </main>
+      <!-- some footer -->
+      {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-aos-anime.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/shave.js"></script>
+    </div>
+  </body>
+  
+</html>

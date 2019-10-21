@@ -1,0 +1,476 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Geatec Suelos y Hormigones</title>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/swiper.min.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/font-awesome.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/aos.min.css" | relURL}}" />
+    <noscript>
+        <style>
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+            #preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+       <!-- ***** Preloader Start ***** -->
+       {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
+    <div class="root lab-root bstrtch">
+        <header>
+            <!-- Start of entire header -->
+            <section class="header-container">
+                <section class="main-header mh2">
+                    <p class="logo">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Logo Geatec">
+                        </a>
+                    </p>   
+                    
+                    <div class="social-nav social-header">
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <div class="animated-social header-social">
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <section id="navFullsize" class="nav-container second-nav">
+                            <nav>
+                                <ul class="change-link-color">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li class="sub-menu current-menu-item">
+                                        <a id="sub" href="#">Servicios</a>
+                                        <ul id="sub-menu-ul">
+                                            <li><a href="">Estudio de Suelos</a></li>
+                                            <li class="current-submenu-item"><a href="/lab/">Laboratorio</a></li>
+                                            <li><a href="">Consultoría</a></li>
+                                            <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="/clients/">Acceso Clientes</a></li>
+                                    <li><a href="/contact/">Contacto</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                </section>
+                
+            </section>
+            <!-- End of entire header -->
+        </header>
+        <section class="mobile-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li id="mobile-sub-parent">
+                        <a href="#">Servicios</a>
+                        <ul id="mobile-sub">
+                                <li><a href="">Estudio de Suelos</a></li>
+                                <li><a href="">Laboratorio</a></li>
+                                <li><a href="">Consultoría</a></li>
+                                <li><a href="fiscal.html">Fiscalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="current-menu-item"><a href="#">Acceso Clientes</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="animated-social">
+                <a class="btn-social" href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+         <!-- start of fade cover  -->
+        <div class="fade-cover">
+            
+        </div>
+        <!-- End of fade cover -->
+        <!-- Start of cover -->
+        <section class="service-cover lab-cover">
+            <div class="head service-head" data-aos="fade-right" data-aos-duration="1000">
+               <span>
+                   <h1>Laboratorio</h1>
+                   <p><a href="/">Inicio</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Laboratorio</a></p>
+                </span>
+            </div>
+        </section>
+        <!-- End of cover -->
+        <!-- Start of service description -->
+        <section class="service-description content">
+            <div class="section-title">
+                <h3><span>Pruebas de laboratorio</span></h3>
+            </div>  
+            <div class="text-form">
+                <div class="section-text">
+                    <p><strong style="color: #00941f;">GEATEC Suelos y Hormigones</strong> Pone a su disposición su laboratorio de pruebas de calidad de <strong style="color: #00941f;">suelos</strong>, <strong style="color: #00941f;">hormigones</strong> y <strong style="color: #00941f;">asfalto</strong>.
+                        
+                     <br>El cual tiene la capacidad de llevar a cabo una variedad extensa de pruebas en dichas áreas.
+                     <br><br>Nos regimos por todas las normas requeridas por instituciones públicas y privadas.
+
+                    </p>
+
+                    <div class="service-features">
+                        <div class="icon-card-container">
+                            <div>
+                                    <div class="circle-container"><div class="circle"><svg class="medal" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                   <style type="text/css">
+                                       
+                                   </style>
+                                   <path class="st0" d="M256,108c-50,0-90.7,40.7-90.7,90.7c0,50,40.7,90.7,90.7,90.7s90.7-40.7,90.7-90.7C346.7,148.7,306,108,256,108
+                                       z"/>
+                                   <path class="st0" d="M444.9,260.1l-27.5-61.4l27.5-61.4l-58.3-33.5l-13.8-65.8l-66.9,7.2L256,0l-49.9,45.1l-66.9-7.2l-13.8,65.8
+                                       L67,137.3l27.5,61.4L67,260.1l58.3,33.5l7.5,35.7L70.6,461.6l65,0.9l42.1,49.5l61.2-130.1l17.1,15.5l17.1-15.5L334.3,512l42.1-49.5
+                                       l65-0.9l-62.3-132.3l7.5-35.7L444.9,260.1z M256,319.4c-66.6,0-120.7-54.2-120.7-120.7S189.4,78,256,78
+                                       c66.6,0,120.7,54.2,120.7,120.7C376.7,265.3,322.5,319.4,256,319.4z"/>
+                                   </svg></div></div>
+                                    <div class="icon-card-text"><p>Equipos de la más alta calidad</p></div>
+                            </div>
+                        </div>
+                        
+                        <div class="icon-card-container">
+                            <div>
+                                    <div class="circle-container"><div class="circle"><svg version="1.1" class="world" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                   <style type="text/css">
+                                   </style>
+                                   <path class="st0" d="M241,509.4V400.5c-27.3,1-54.3,4.9-79.9,11.3c4.1,10,8.7,19.6,13.6,28.6C194.2,476.4,218.5,501.4,241,509.4z"/>
+                                   <path class="st0" d="M337.4,440.4c4.9-9,9.4-18.6,13.6-28.6c-25.7-6.4-52.7-10.2-79.9-11.3v108.8
+                                       C293.5,501.4,317.8,476.4,337.4,440.4z"/>
+                                   <path class="st0" d="M241,370.5v-99.8H131.6c1.4,39,8,77.7,19.1,112.8C179.7,376,210.3,371.6,241,370.5z"/>
+                                   <path class="st0" d="M241,240.7v-99.8c-30.7-1.1-61.3-5.5-90.2-13c-11.1,35.1-17.8,73.8-19.1,112.8H241z"/>
+                                   <path class="st0" d="M380,91.1c18.2-6.2,35.5-13.6,51.4-22.3c-27.9-26.2-61.7-46.3-99.2-58c11.2,12.7,21.8,28.1,31.5,45.9
+                                       C369.7,67.6,375.1,79.1,380,91.1z"/>
+                                   <path class="st0" d="M174.6,71c-4.9,9-9.4,18.6-13.6,28.6c25.7,6.4,52.7,10.2,79.9,11.3V2C218.5,10,194.2,34.9,174.6,71z"/>
+                                   <path class="st0" d="M271,270.7v99.8c30.8,1.1,61.3,5.5,90.2,13c11.1-35.1,17.8-73.8,19.2-112.8H271z"/>
+                                   <path class="st0" d="M271,140.9v99.8h109.4c-1.4-39-8-77.7-19.1-112.8C332.3,135.3,301.8,139.8,271,140.9z"/>
+                                   <path class="st0" d="M121.9,392c-12-37.8-19-79.1-20.3-121.4H0c3.3,56.7,25.1,108.5,59.4,149.4C78.5,409,99.5,399.6,121.9,392z"/>
+                                   <path class="st0" d="M380,420.2c-4.9,12-10.3,23.5-16.2,34.5c-9.7,17.8-20.3,33.2-31.5,45.9c37.5-11.7,71.2-31.8,99.2-58
+                                       C415.5,433.9,398.2,426.4,380,420.2z"/>
+                                   <path class="st0" d="M132,420.2c-18.2,6.2-35.5,13.6-51.4,22.3c27.9,26.2,61.7,46.3,99.2,58c-11.2-12.7-21.8-28.1-31.5-45.9
+                                       C142.3,443.7,136.9,432.2,132,420.2z"/>
+                                   <path class="st0" d="M390.1,119.3c12,37.8,19,79.1,20.3,121.4H512c-3.3-56.7-25.1-108.5-59.4-149.4
+                                       C433.5,102.3,412.5,111.8,390.1,119.3z"/>
+                                   <path class="st0" d="M390.1,392c22.3,7.6,43.4,17,62.5,28.1c34.3-41,56.1-92.8,59.4-149.4H410.4C409.1,313,402.1,354.3,390.1,392z"
+                                       />
+                                   <path class="st0" d="M271,2v108.8c27.3-1,54.3-4.9,79.9-11.3c-4.1-10-8.7-19.6-13.6-28.6C317.8,34.9,293.5,10,271,2z"/>
+                                   <path class="st0" d="M121.9,119.3c-22.3-7.6-43.4-17-62.5-28.1C25.1,132.2,3.3,184,0,240.7h101.6
+                                       C102.9,198.4,109.9,157.1,121.9,119.3z"/>
+                                   <path class="st0" d="M132,91.1c4.9-12,10.3-23.5,16.2-34.5c9.7-17.8,20.3-33.2,31.5-45.9c-37.5,11.7-71.2,31.8-99.2,58
+                                       C96.5,77.5,113.8,85,132,91.1z"/>
+                                   </svg>
+                                   </div></div>
+                                    <div class="icon-card-text"><p>Estándares <br>internacionales</p></div>
+                            </div>
+                        </div>
+                        
+                        <div class="icon-card-container">
+                            <div>
+                                    <div class="circle-container"><div class="circle"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                                   <style type="text/css">
+                                       .st3{fill:#00941f;}
+                                       .st4{fill:#fff;}
+                                       .st5{fill:none;}
+                                   </style>
+                                   
+                                   <g >
+                                       <path class="st3 wheel" d="M29.7,8.9L29.7,8.9l-0.3-0.7l0-0.1c0.8-1.8,0.7-1.9,0.6-2l-1.1-1c0,0-0.1-0.1-0.2-0.1c-0.1,0-0.2,0-1.8,0.7
+                                           l-0.1,0l-0.7-0.3l0-0.1c-0.7-1.8-0.8-1.8-1-1.8H25l0-0.1l-1.4,0c-0.2,0-0.3,0-0.9,1.9l0,0.1L22,5.8l-0.1,0
+                                           c-0.1-0.1-0.2-0.1-0.4-0.1c-0.8-0.3-1.4-0.5-1.5-0.5c-0.1,0-0.1,0-0.2,0.1l-1.1,1c-0.1,0.1-0.2,0.2,0.7,2l0,0.1l-0.3,0.6l-0.1,0
+                                           C19,9,18.8,9,18.6,9.1c0,0-0.2,0.1-0.4,0.3c-0.8,0.4-0.8,0.4-0.8,0.6l0,1.5c0,0.2,0,0.3,1.9,0.9l0.1,0l0.3,0.6l0,0.1
+                                           c-0.8,1.8-0.7,1.9-0.6,2l1.1,1c0,0,0.1,0.1,0.2,0.1c0.1,0,0.2,0,1.8-0.7l0.1,0l0.7,0.3l0,0.1c0.7,1.6,0.8,1.8,1,1.8l0,0h1.4
+                                           c0.1,0,0.1,0,0.2-0.1l0,0c0.2,0,0.3,0,0.9-1.9l0-0.1l0.5-0.2l0.1,0c1.1,0.5,1.7,0.7,1.9,0.7c0.1,0,0.1,0,0.2-0.1l0.1-0.1
+                                           c0,0,0.1,0,0.1,0l1.1-1.1c0.1-0.1,0.2-0.2-0.7-2l0-0.1l0.2-0.5c1.9-0.7,1.9-0.8,1.9-1V9.8C31.6,9.6,31.6,9.5,29.7,8.9z M22.1,10.6
+                                           c0-0.7,0.3-1.3,0.8-1.8c0,0,0,0,0,0c0.1-0.1,0.2-0.1,0.3-0.2c0.4-0.2,0.8-0.4,1.3-0.4c1.4,0,2.5,1.1,2.5,2.4c0,0.7-0.3,1.3-0.8,1.8
+                                           c0,0,0,0-0.1,0.1c-0.1,0.1-0.1,0.1-0.2,0.2c-0.4,0.2-0.8,0.4-1.2,0.4C23.2,13,22.1,11.9,22.1,10.6z"/>
+                                   </g>
+                                   <polygon class="st4" points="23.8,11.3 21.6,20.4 12.4,17.8 14,10.7 "/>
+                                   <g>
+                                       <path class="st5" d="M23.8,11.3L14,10.7l-1.5,7.1l9.2,2.6L23.8,11.3z M17.6,18.2c-1.6,0-2.9-1.4-2.9-3.1c0-1.7,1.3-3.1,2.9-3.1
+                                           c0.3,0,0.6,0,0.9,0.1L18,13.9c-0.1,0-0.2-0.1-0.4-0.1c-0.7,0-1.2,0.6-1.2,1.3c0,0.7,0.5,1.3,1.2,1.3c0.4,0,0.7-0.2,1-0.5L20,17
+                                           C19.5,17.8,18.6,18.3,17.6,18.2z M20.3,17l-1.4-1.2c0.2-0.2,0.2-0.5,0.2-0.8c0-0.6-0.4-1.1-0.8-1.2l0.5-1.8c1.2,0.4,2.1,1.6,2.1,3
+                                           C20.9,15.8,20.7,16.4,20.3,17z"/>
+                                       <path class="st5" d="M5.7,16.4c2,0.2,3.9-1.3,4.1-3.4c0-0.4,0-0.7,0-1.1c-1.9,0-5.4,0-7.3,0c0,0.1,0,0.2,0,0.3
+                                           C2.2,14.3,3.7,16.1,5.7,16.4z"/>
+                                       <polygon class="st5" points="25.4,10.9 26,11.2 25.9,11.2 25.4,10.9 	"/>
+                                       <path class="st5" d="M19.8,20.9L12,18.7l0,0c0.1,0.2,0.1,0.5,0.1,0.8c0,0.2,0,0.4,0,0.6l4.2,1.4L19.8,20.9z"/>
+                                       <path class="st5" d="M12.1,20.6c0,0.2,0,0.3,0,0.5l1.1-0.2L12.1,20.6z"/>
+                                       <path class="st5" d="M22.4,21.3l-8.3,1.1l-2-0.7c0,0.2,0,0.4,0,0.6l2,0.7v0l8.8-1.3l2.5-10.8l-0.5-0.3L22.4,21.3z"/>
+                                       <path class="st3" d="M18.8,12l-0.5,1.8c0.5,0.2,0.8,0.6,0.8,1.2c0,0.3-0.1,0.5-0.2,0.8l1.4,1.2c0.4-0.5,0.6-1.2,0.6-1.9
+                                           C20.9,13.6,20,12.4,18.8,12z"/>
+                                       <path class="st3" d="M17.6,16.4c-0.7,0-1.2-0.6-1.2-1.3c0-0.7,0.5-1.3,1.2-1.3c0.1,0,0.2,0,0.4,0.1l0.5-1.8
+                                           C18.2,12,17.9,12,17.6,12c-1.6,0-2.9,1.4-2.9,3.1c0,1.7,1.3,3.1,2.9,3.1c1,0,1.8-0.5,2.4-1.2l-1.4-1.2C18.4,16.2,18,16.4,17.6,16.4
+                                           z"/>
+                                       <path class="st3" d="M25.6,8.9l0.3,0.1C25.8,9,25.7,9,25.6,8.9z"/>
+                                       <path class="st3" d="M32,24.1H12.1c0-0.4,0-0.8,0-1.2l1.9,0.7l9.4-1.5l0.9-3.9l1.1-4.7c0,0,0,0,0,0l0,0l0.6-2.3l-0.1-0.1l0.1,0.1
+                                           l-0.6-0.4l-2.5,10.8L14.1,23v0l-2-0.7c0-0.2,0-0.4,0-0.6l2,0.7l8.3-1.1l2.5-10.8l0.5,0.3l0,0l-0.5-0.3l-2.3-0.1c0,0,0,0,0,0
+                                           l-4.2-0.2l-4.9-0.3l-1.7,8.1h0l0,0c-0.4-0.7-1.2-1.1-2.2-1.1H9c-0.6,0.6-1.7,1-3,1s-2.3-0.4-3-1H2.6c-1.6,0-2.6,0.9-2.6,2.5
+                                           c0,1.5,0,5.8,0,6.6s-0.1,1.7,0.6,1.7c0.3,0,1.1,0,2.2,0c1.1,0,2.1,0,3,0c0.1,0,0.3,0,0.4,0c1.2,0,2.2,0,2.8,0c0.1,0,0.2,0,0.2,0
+                                           c0,0,0.1,0,0.1,0c0.9,0,1.6,0,1.9,0c0.1,0,0.2,0,0.2,0c0.7,0,0.6-0.9,0.6-1.7c0-0.1,0-0.3,0-0.6H32V24.1z M14,10.7l9.8,0.7
+                                           l-2.1,9.1l-9.2-2.6L14,10.7z M12.1,19.4c0-0.3,0-0.5-0.1-0.8l0,0l7.8,2.2l-3.6,0.5L12.1,20C12.1,19.8,12.1,19.6,12.1,19.4z
+                                            M12.1,20.6l1.1,0.4l-1.1,0.2C12.1,20.9,12.1,20.8,12.1,20.6z"/>
+                                       <path class="st3" d="M1.6,11.9c0,0.1,0,0.1,0,0.2c-0.3,2.5,1.5,4.8,4,5.1c2.5,0.3,4.7-1.6,5-4.1c0-0.4,0-0.8,0-1.2
+                                           c0.3,0,0.5,0,0.5,0c0.3,0,0.6-0.1,0.6-0.4c0-0.5,0-0.4,0-0.5c0-0.4-0.2-0.4-0.5-0.4c-0.3,0-0.6,0-0.6,0S9.9,5.6,5.2,6.4
+                                           C3.8,6.6,2.8,7.2,2.2,8c1.2-0.6,2.6-0.9,3.8-0.7c1.2,0.2,2.1,0.7,2.7,1.6C8.4,8.5,7.9,8.3,7.4,8.1C7,7.8,6.4,7.7,6,7.7
+                                           C4.6,7.5,2.9,7.9,1.7,8.7c-0.8,1.5-0.6,3.2-0.6,3.2S1.3,11.9,1.6,11.9z M2.4,12.2c0-0.1,0-0.2,0-0.3c1.9,0,5.4,0,7.3,0
+                                           c0.1,0.3,0.1,0.7,0,1.1c-0.2,2.1-2.1,3.6-4.1,3.4C3.7,16.1,2.2,14.3,2.4,12.2z"/>
+                                       <polygon class="st3" points="25.4,10.9 25.9,11.2 25.4,10.8 	"/>
+                                   </g>
+                                   <polygon class="st4" points="24.9,10.5 25.4,10.9 23.1,20.8 22.6,20.2 "/>
+                                   </svg>
+                                   
+                                   </div></div>
+                                    <div class="icon-card-text"><p>Profesionales <br>altamente capacitados</p>  </div>
+                            </div>
+                        </div>
+                        <div class="icon-card-container">
+                            <div>
+                                    <div class="circle-container"><div class="circle"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                   <style type="text/css">
+                                       
+                                   </style>
+                                   <circle class="st1 bullseye" cx="256" cy="256" r="182"/>
+                                   <circle class="st1 bullseye" cx="256" cy="256" r="72.9"/>
+                                   <rect x="34" y="244.5" class="st2 bullseye" width="444" height="23"/>
+                                   <rect x="244.5" y="34" class="st2 bullseye" width="23" height="444"/>
+                                   </svg>
+                                   </div></div>
+                                    <div class="icon-card-text"><p>Resultados <br>precisos</p></div>
+                            </div>
+                        </div>
+                        
+                        <div class="icon-card-container">
+                            <div>   
+                                <div class="circle-container"><div class="circle"><svg class="chrono" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                               <style type="text/css">
+                               </style>
+                               <path class="st0" d="M0,312.5v30h102.3c-2-9.9-3.3-19.9-3.9-30H0z"/>
+                               <path class="st0" d="M53.3,248.5v30h45.6c0.9-10.1,2.5-20.1,4.8-30H53.3z"/>
+                               <path class="st0" d="M112.1,376.5H53.3v30h72.6c-3.8-6.9-7.3-14.1-10.5-21.4C114.3,382.2,113.1,379.4,112.1,376.5z"/>
+                               <path class="st0" d="M320,76.7c21.6,0,42.7,3.1,63,9.1V51.3h27.7v-30H229.3v30H257v34.4C277.3,79.7,298.4,76.7,320,76.7z"/>
+                               <path class="st0" d="M163,141.7c16.2-16.2,34.5-29.6,54.5-40l-2.6-3.2c-7.8-9.6-18.9-15.5-31.3-16.8c-12.3-1.2-24.4,2.4-34,10.3
+                                   s-15.5,18.9-16.8,31.3c-1.2,12.3,2.4,24.4,10.3,34l2.9,3.5C151.3,154.1,157,147.7,163,141.7L163,141.7z"/>
+                               <path class="st0" d="M477,141.7c6.1,6.1,11.7,12.4,17,19l2.9-3.5c7.8-9.6,11.5-21.6,10.3-34c-1.2-12.3-7.2-23.4-16.8-31.3
+                                   c-9.6-7.8-21.6-11.5-34-10.3c-12.3,1.2-23.4,7.2-31.3,16.8l-2.6,3.2C442.5,112.1,460.8,125.5,477,141.7z"/>
+                               <path class="st0" d="M320,106.7c-106,0-192,86-192,192s86,192,192,192s192-86,192-192S426,106.7,320,106.7z M446,298.7
+                                   c0,69.5-56.5,126-126,126s-126-56.5-126-126s56.5-126,126-126h15v111h111V298.7z"/>
+                               <path class="st0" d="M414.8,313.7H305V203.8c-45.8,7.2-81,47-81,94.8c0,52.9,43.1,96,96,96C367.8,394.7,407.6,359.5,414.8,313.7
+                                   L414.8,313.7z"/>
+                               </svg>
+                               </div></div>
+                                <div class="icon-card-text"><p>Entrega <br>rápida</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow-button">
+                            
+                    </div>
+                </div>
+                <div class="form3">  
+                        <div class="form1" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                                <h3>SOLICITA UNA COTIZACIÓN GRATIS</h3>
+                                <p>Llena el formulario a continuación y estaremos en contacto en breve</p>
+                            <!-- start of form2-->
+                                <form method="POST" data-netlify="true" class="contact-form">
+                
+                                    <input name="name" placeholder="NOMBRE COMPLETO" required>
+                
+                                    <input name="phone" type="tel" placeholder="TELÉFONO" required>
+                        
+                                    <input name="email" type="email" placeholder="EMAIL" required>
+                    
+                                    <select id ="topicList" name="theme" size="1">
+                        
+                                        <option value="URG Contacto Web">TIPO DE SOLICITUD</option> 
+                
+                                        <option value = "URG Cotizacion">Cotizaci&oacute;n</option>
+                
+                                        <option value = "URG Informacion">Informaci&oacute;n general</option>
+                
+                                    </select>
+                                    
+                                <textarea name="message" placeholder="DESCRIPCIÓN"></textarea>
+                                <div class="btn1">
+                                    <input id="submit1" name="submit" type="submit" value="ENVIAR">
+                                </div>
+                            </form>
+                            <!-- end of form -->
+                        </div>
+                </div>
+            </div>
+            
+          </section>
+         <!-- End of service description -->
+        <section class="content lab-services-container">
+            <div class="lab-services-parent">
+                <div class="section-title">
+                    <h3><span>ASFALTO</span></h3>
+                </div>
+                <div class="lab-services">
+                    {{ $headless := .Site.GetPage "/asfalto" }}
+                    {{ $reusablePages := $headless.Resources.Match "asfalto*" }} 
+                    {{ range $reusablePages }}
+                    <div class="lab-service-father">
+                        <div class="lab-service">
+                            <div class="lab-service-img" style="background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url({{ with .Params.image }}{{ . }}{{ end }});"><img src="/images/geatecwhite.svg" alt="logo geatec blanco">
+                                <h3>{{.Title}}</h3>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="lab-service-text-2">
+                                    <h3>{{.Title}}</h3>
+                                    <p>{{ .Content }}</p>
+                                </div></div>
+                            <div class="lab-service-text">
+                                <h3>{{.Title}}</h3>
+                                <p>{{ .Content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                   
+                </div>
+
+            </div>
+            <div class="lab-services-parent">
+                <div class="section-title">
+                    <h3><span>SUELOS</span></h3>
+                </div>
+                <div class="lab-services">
+                    {{ $headless := .Site.GetPage "/suelos" }}
+                    {{ $reusablePages := $headless.Resources.Match "suelos*" }} 
+                    {{ range $reusablePages }}
+                    <div class="lab-service-father">
+                        <div class="lab-service">
+                            <div class="lab-service-img" style="background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url({{ with .Params.image }}{{ . }}{{ end }});"><img src="/images/geatecwhite.svg" alt="logo geatec blanco">
+                                <h3>{{.Title}}</h3>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="lab-service-text-2">
+                                    <h3>{{.Title}}</h3>
+                                    <p>{{ .Content }}</p>
+                                </div></div>
+                            <div class="lab-service-text">
+                                <h3>{{.Title}}</h3>
+                                <p>{{ .Content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                       
+                </div>
+    
+            </div>
+            <div class="lab-services-parent">
+                <div class="section-title">
+                    <h3><span>HORMIGONES</span></h3>
+                </div>
+                <div class="lab-services">
+                    {{ $headless := .Site.GetPage "/hormigones" }}
+                    {{ $reusablePages := $headless.Resources.Match "hormigones*" }} 
+                    {{ range $reusablePages }}
+                    <div class="lab-service-father">
+                        <div class="lab-service">
+                            <div class="lab-service-img" style="background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url({{ with .Params.image }}{{ . }}{{ end }});"><img src="/images/geatecwhite.svg" alt="logo geatec blanco">
+                                <h3>{{.Title}}</h3>
+                                <div class="box">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="lab-service-text-2">
+                                    <h3>{{.Title}}</h3>
+                                    <p>{{ .Content }}</p>
+                                </div></div>
+                            <div class="lab-service-text">
+                                <h3>{{.Title}}</h3>
+                                <p>{{ .Content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                    
+                </div>
+
+            </div>
+        </section>
+        <!-- Double banner -->
+        <section class="full-width">
+            <div class="double-banner banner3">
+                <div class="slogan">
+                    <h1 data-aos="fade-up" data-aos-duration="600">Innovación. Rendimiento. Calidad</h1>
+                    <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><button class="btn4" >REVISA NUESTROS PRECIOS</button></div>
+                </div>
+                <div class="picture" data-aos="fade-left" data-aos-duration="600">
+                    {{ $headless := .Site.GetPage "/bannerslider" }}
+                    {{ $reusablePages := $headless.Resources.Match "bannerslider*" }} 
+                    {{ range $reusablePages }}
+                        {{ range .Params.galleryImages }}
+                        <div class="picture-slides" style="display: none;">{{ . }}</div>
+                        {{ end }}
+                    {{ end }}
+                    <figure class="hoverbtn">
+                        
+                    <figcaption>
+                        <h3>CONTÁCTANOS</h3>
+                        </figcaption>
+                        <a href="#"></a>
+                      </figure>
+                </div>
+            </div>
+        </section>
+        <!-- End of double banner -->
+
+        <!-- Start of Blog -->
+        {{ block "blogentries" . }}{{ partial "blog-entries.html" .}}{{ end }}
+<section class="full-width">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1390.1848170603428!2d-77.81045166199002!3d-0.9846385972673649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-0.9938300999999999!2d-77.81494529999999!4m3!3m2!1d-0.9841302!2d-77.8102086!5e0!3m2!1sen!2sec!4v1570006029076!5m2!1sen!2sec" width="760" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</section>
+
+        <!-- End of blog -->
+        {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
+    </div>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-aos-anime.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+
+    
+</body>
+
+</html>

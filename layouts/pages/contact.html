@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="GEATEC Suelos y Hormigones" />
+	<meta property="og:title" content="Páginas Web Profesionales | Amazon Digital Ecuador | Diseño y Publicidad Web" />
+	<meta property="og:description" content="Amazon Digital | Diseño Web Profesional a Bajos Precios - Mantenimiento de Páginas Web - Facebook Ads - Inglés y Español - Google SEO - Quito Ecuador Tlf: +593996705431"/>
+	<meta name="description" content="Amazon Digital | Diseño Web Profesional a Bajos Precios - Mantenimiento de Páginas Web - Facebook Ads - Inglés y Español - Google SEO - Quito Ecuador Tlf: +593996705431"/>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/swiper.min.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/font-awesome.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/aos.min.css" | relURL}}" />
+    
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    {{ $title := site.Title }}
+    {{ if not .IsHome }}
+      {{ $title = printf "%s | %s" .Title site.Title }}
+    {{ end }}
+    <title>
+        GEATEC Suelos y Hormigones
+    </title>
+    <noscript>
+            <style>
+                [data-aos] {
+                    opacity: 1 !important;
+                    transform: translate(0) scale(1) !important;
+                }
+                #preloader {
+                display: none;
+            }
+            </style>
+    </noscript>
+    
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
+    <div class="root">
+        <header>
+            <!-- Start of entire header -->
+            <section class="header-container">
+                <section class="main-header mh2">
+                    <p class="logo">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Logo Geatec">
+                        </a>
+                    </p>   
+                    
+                    <div class="social-nav social-header">
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <div class="animated-social header-social">
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <section id="navFullsize" class="nav-container second-nav">
+                            <nav>
+                                <ul class="change-link-color">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li class="sub-menu">
+                                        <a id="sub" href="#">Servicios</a>
+                                        <ul id="sub-menu-ul">
+                                            <li><a href="">Estudio de Suelos</a></li>
+                                            <li><a href="/lab/">Laboratorio</a></li>
+                                            <li><a href="">Consultoría</a></li>
+                                            <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="/clients/">Acceso Clientes</a></li>
+                                    <li class="current-menu-item"><a href="/contact/">Contacto</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                </section>
+                
+            </section>
+            <!-- End of entire header -->
+        </header>
+        <section class="mobile-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li id="mobile-sub-parent">
+                        <a href="#">Servicios</a>
+                        <ul id="mobile-sub">
+                                <li><a href="">Estudio de Suelos</a></li>
+                                <li><a href="">Laboratorio</a></li>
+                                <li><a href="">Consultoría</a></li>
+                                <li><a href="fiscal.html">Fiscalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="clients.html">Acceso Clientes</a></li>
+                    <li class="current-menu-item"><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="animated-social">
+                <a class="btn-social" href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+         <!-- start of fade cover  -->
+        <div class="fade-cover">
+            
+        </div>
+        <!-- End of fade cover -->
+        <!-- Start of cover -->
+        <section class="service-cover contact">
+            <div class="head service-head" data-aos="fade-right" data-aos-duration="1000">
+               <span>
+                   <h1>Contacto</h1>
+                   <p><a href="/">Inicio</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Contacto</a></p>
+                </span>
+            </div>
+        </section>
+        <!-- End of cover -->
+        <!-- Start of contact container -->
+        <section class="content contact-page">
+            <h2>Contacte a uno de nuestros agentes o agende una cita<strong style="color: #00941f; font-style: italic;"> Estaremos gustosos de atender sus necesidades</strong></h2>
+                <div class="form-contact">
+                    <div class="form5-container">
+                        <div class="form5" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                                    
+                        <!-- start of form2-->
+                            <form method="POST" data-netlify="true" class="contact-form">
+                                
+                                <input name="name" placeholder="Nombre Completo" required>
+
+                                <input name="phone" type="tel" placeholder="Teléfono" required>
+                    
+                                <input name="email" type="email" placeholder="Email" required>
+                
+                                <select id ="topicList" name="theme" size="1">
+                    
+                                    <option value="URG Contacto Web">Solicitud</option> 
+            
+                                    <option value = "URG Cotizacion">Cotizaci&oacute;n</option>
+            
+                                    <option value = "URG Informacion">Informaci&oacute;n general</option>
+            
+                                </select>
+
+                                <textarea name="message" placeholder="Mensaje"></textarea>
+                                <div class="btn5">
+                                    <input id="submit1" name="submit" type="submit" value="ENVIAR">
+                                </div>
+                            </form>
+                            <!-- end of form -->
+                        </div>
+                    </div>
+                    <div class="contact-container">
+                        <p>
+                            Por favor contáctenos usando la información a continuación para mayor información sobre nuestros servicios.
+                        </p>
+
+                        <span class="address">
+                            <p>
+                                Calle Agustín Calapucha<br>
+                                Tena, Napo 150150<br>
+                                Ecuador
+                            </p>
+                        </span>
+
+                        <span class="phone">
+                            <p>
+                                +593 995 850 844
+                            </p>
+                        </span>
+
+                        <span class="e-mail">
+                            <p>
+                                <a href="mailto:alejandra.leon@gea-tec.com?subject=URG gea-tec.com">alejandra.leon@gea-tec.com</a>
+                            </p>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="section-title">
+                        <h3><span>Encuéntrenos</span></h3>
+                    </div>  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1390.1848170603428!2d-77.81045166199002!3d-0.9846385972673649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-0.9938300999999999!2d-77.81494529999999!4m3!3m2!1d-0.9841302!2d-77.8102086!5e0!3m2!1sen!2sec!4v1570006029076!5m2!1sen!2sec" width="760" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </section>
+        <!-- some footer -->
+      {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
+
+    </div>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-aos-anime.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="text/javascript" src="/js/shave.js"></script>
+    
+</body>
+
+</html>

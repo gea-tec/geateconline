@@ -1,0 +1,41 @@
+<!-- Start of Blog -->
+<section class="blog content">
+        <div class="section-title">
+            <H3><span>ÚLTIMAS NOTICIAS</span></H3>
+        </div>
+            <div class="swiper-container s2">
+                <div class="swiper-wrapper">
+                    {{ range where .Site.Pages "Params.series" "blog" }}
+                    <div class="swiper-slide">
+                        <div class="blog-post-thumb">
+                            <div class="img" style="background:url({{ with .Params.thumbnail }}{{ . }}{{ end }});">
+                                <p class="publish-date">{{.Date.Day}} {{.Date.Month}}, {{.Date.Year}}</p>
+                            </div>
+                            <div class="blog-content">
+                                <h3>
+                                        <a href="/">{{.Title}}</a>
+                                </h3>
+                                <div class="text">
+                                        <p>{{.Description}}
+                                        </p>
+                                        
+                                </div>
+                                <div class="btn-parent">
+                                    <a href="/" class="main-button">LEER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                    
+                </div>
+                
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> 
+        <div class="center-pagination">
+            <div class="swiper-pagination"></div>
+        </div>    
+    </section>
+
+    <!-- End of blog -->

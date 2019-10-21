@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Geatec Suelos y Hormigones</title>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/swiper.min.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/font-awesome.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/aos.min.css" | relURL}}" />
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@4.2.2/dist/simplebar.css"/>
+    <noscript>
+        <style>
+            [data-simplebar] {
+                overflow: auto;
+            }
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+            #preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
+    <div class="root client-root">
+        <header>
+            <!-- Start of entire header -->
+            <section class="header-container">
+                <section class="main-header mh2">
+                    <p class="logo">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Logo Geatec">
+                        </a>
+                    </p>   
+                    
+                    <div class="social-nav social-header">
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <div class="animated-social header-social">
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <section id="navFullsize" class="nav-container second-nav">
+                            <nav>
+                                <ul class="change-link-color">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li class="sub-menu">
+                                        <a id="sub" href="#">Servicios</a>
+                                        <ul id="sub-menu-ul">
+                                            <li><a href="">Estudio de Suelos</a></li>
+                                            <li><a href="/lab/">Laboratorio</a></li>
+                                            <li><a href="">Consultoría</a></li>
+                                            <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li class="current-menu-item"><a href="/clients/">Acceso Clientes</a></li>
+                                    <li><a href="/contact/">Contacto</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                </section>
+                
+            </section>
+            <!-- End of entire header -->
+        </header>
+        <section class="mobile-nav">
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li id="mobile-sub-parent">
+                        <a href="#">Servicios</a>
+                        <ul id="mobile-sub">
+                                <li><a href="">Estudio de Suelos</a></li>
+                                <li><a href="">Laboratorio</a></li>
+                                <li><a href="">Consultoría</a></li>
+                                <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="current-menu-item"><a href="/clients/">Acceso Clientes</a></li>
+                    <li><a href="/contact/">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="animated-social">
+                <a class="btn-social" href="#">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+         <!-- start of fade cover  -->
+        <div class="fade-cover">
+            
+        </div>
+        <!-- End of fade cover -->
+        <!-- Start of cover -->
+        <section class="service-cover clients-cover">
+            <div class="head service-head" data-aos="fade-right" data-aos-duration="1000">
+               <span>
+                   <h1>Clientes</h1>
+                   <p><a href="/">Inicio</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Acceso Clientes</a></p>
+                </span>
+            </div>
+        </section>
+        <!-- End of cover -->
+        <!-- Start of clients container -->
+        <section class="content clients-page">
+            <h3><strong style="color: #00941f;">GEATEC</strong> brinda servicios accesibles y de calidad, por eso nuestros clientes pueden acceder a documentos importantes en cualquier momento a través de nuestra plataforma digital.<br><br>
+            Digite su nombre a continuación, haga click en acceder e ingrese la clave recibida a través de su correo electrónico.</h3>
+            <div class="search-box-container">
+                <div id="users">
+
+                    <!-- class="search" automagically makes an input a search field. -->
+                    <span id="search-bar"><input class="search" placeholder="Buscar" /></span>
+                    <!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+                    
+                    
+                    <!-- Child elements of container with class="list" becomes list items -->
+                    <div class="custom-scroll" data-simplebar>
+                    <ul class="list" >
+                            {{ $headless := .Site.GetPage "/users" }}
+                            {{ $reusablePages := $headless.Resources.Match "users*" }}
+                            {{ range $reusablePages }}
+                        <li>
+                    <!-- The innerHTML of children with class="name" becomes this items "name" value -->
+                            <h3 class="name">{{.Title}}</h3>
+                            <p class="link"><a target="_blank" href="{{ with .Params.link }}{{ . }}{{ end }}">Acceder</a></p>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of clients page -->
+
+        <footer data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <section class="widgets"><article>
+                    <h3><span>Contacto</span></h3>
+                    <p>GEATEC Suelos y Hormigones<br><strong>Tena:</strong><br>Calle Agustín Calapucha<br>Tlf: +593 995 850 844<br>E-mail: <a href="mailto:alejandra.leon@gea-tec.com?subject=URG gea-tec.com">alejandra.leon@gea-tec.com</a></p>
+                </article><article class="widget_links">
+                    <h3><span>Servicios</span></h3>
+                    <ul>
+                        <li><a href="integrityreport.html">Estudio de Suelos</a></li>
+                        <li><a href="poligrafo.html">Laboratorio</a></li>
+                        <li><a href="integritest.html">Fiscalización</a></li>
+                        <li><a href="seguridadvial.html">Consultoría</a></li>
+                    </ul>
+                </article><article class="widget_photos">
+                    <h3><span>Social</span></h3>
+                    <ul>
+                    <li><a style="color: #3b5998" target="_blank" href=""><i class="fa fa-facebook-square" aria-hidden="true"></i> <span style="color: #fff; margin-left: 7px;">Geatec Suelos y Hormigones</span></a></li>
+                        <li><a style="color: #cc3333" target="_blank " href=""><i class="fa fa-google-plus" aria-hidden="true"></i> <span style="color: #fff; margin-left: 7px;">Geatec Suelos y Hormigones</span></a></li>
+                        <li><a style="color: #0077b5" target="_blank" href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i> <span style="color: #fff; margin-left: 7px;">Geatec Suelos y Hormigones</span></a></li>
+                    </ul>
+                </article>
+            </section>
+            
+            <section class="copyright">Copyright © 2019 by <a href="https://amazondigitalecuador.com">Amazon Digital Ecuador</a></section>
+        </footer>
+    </div>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/swiper-aos-anime.min.js"></script>
+    <script type="text/javascript" src="/js/list.min.js"></script>
+    <script src="https://unpkg.com/simplebar@4.2.2/dist/simplebar.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+
+    
+</body>
+
+</html>
