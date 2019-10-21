@@ -9,8 +9,8 @@ publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
-display_url: https://geatec.netlify.com
-logo_url: https://geatec.netlify.com/images/logo.svg
+display_url: https://gea-tec.com
+logo_url: https://gea-tec.com/images/logo.svg
 
 collections:
 
