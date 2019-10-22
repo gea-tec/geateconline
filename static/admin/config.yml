@@ -79,6 +79,7 @@ collections:
     create: false
     delete: false
     filter: {field: "series", value: "_users"}
+    preview_path: "/clients/"
     slug: "{{series}}-{{slug}}"
     editor:
      preview: true
@@ -93,6 +94,7 @@ collections:
     folder: "content/users"
     create: true
     filter: {field: "series", value: "users"}
+    preview_path: "/clients/"
     slug: "{{series}}-{{slug}}"
     editor:
      preview: false
@@ -109,6 +111,7 @@ collections:
     create: false
     delete: false
     filter: {field: "series", value: "_lab"}
+    preview_path: "/lab/"
     slug: "{{series}}-{{slug}}"
     editor:
      preview: true
@@ -173,6 +176,7 @@ collections:
     create: false
     delete: false
     filter: {field: "series", value: "_suelos"}
+    preview_path: "/suelos/"
     slug: "{{series}}-{{slug}}"
     editor:
      preview: true
@@ -216,6 +220,7 @@ collections:
     create: false
     delete: false
     filter: {field: "series", value: "_consulting"}
+    preview_path: "/consultoria/"
     slug: "{{series}}-{{slug}}"
     editor:
      preview: true
