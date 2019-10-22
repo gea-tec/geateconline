@@ -1548,6 +1548,9 @@ a[target="_blank"]:after {
     .card {
         border-radius: 20px;
     }
+    .card-back {
+        border-radius: 20px !important;
+    }
 }
 
 @media screen and (max-width: 375px) {
