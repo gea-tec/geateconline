@@ -167,7 +167,7 @@ collections:
       - {label: "Descripcion (tomar en cuenta limite de caracteres = 325)", name: "body", widget: "markdown", required: true}
       - {label: "Laboratorio", name: "series", widget: "hidden", default: "hormigones"}
 
-  - name: "estudiosuelos"
+  - name: "estudiodesuelos"
     label: "Estudio de Suelos: Descripción"
     folder: "content/editablepages"
     create: false
