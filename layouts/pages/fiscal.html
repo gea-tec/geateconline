@@ -1,8 +1,16 @@
 <!DOCTYPE html> 
 <html>
 <head>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "_inspection*" }} 
+    {{ range $reusablePages }}
 	<meta charset="UTF-8">
-    <title>Geatec Suelos y Hormigones</title>
+    <title>{{.Params.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="{{.Params.title }}" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
@@ -22,7 +30,7 @@
             </style>
         </noscript>
 </head>
-
+{{ end }}
 <body>
     <!-- ***** Preloader Start ***** -->
     {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
@@ -43,17 +51,21 @@
                                 <span class="hamburger-inner"></span>
                             </span>
                         </button>
-                        <div class="animated-social header-social">
-                            <a class="btn-social" href="#">
+                        {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+                        {{ range $reusablePages }}
+                        <div class="animated-social  header-social">
+                            <a class="btn-social" href="{{ .Params.lnlink }}">
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a class="btn-social" href="#">
+                            <a class="btn-social" href="{{ .Params.glink }}">
                                 <i class="fa fa-google-plus" aria-hidden="true"></i>
                             </a>
-                            <a class="btn-social" href="#">
+                            <a class="btn-social" href="{{ .Params.fblink }}">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
                         </div>
+                        {{ end }}
                         <section id="navFullsize" class="nav-container second-nav">
                             <nav>
                                 <ul class="change-link-color">
@@ -97,17 +109,21 @@
                     <li><a href="/contact/">Contacto</a></li>
                 </ul>
             </nav>
+            {{ $headless := .Site.GetPage "/editablepages" }}
+            {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+            {{ range $reusablePages }}
             <div class="animated-social">
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.lnlink }}">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.glink }}">
                     <i class="fa fa-google-plus" aria-hidden="true"></i>
                 </a>
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.fblink }}">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
             </div>
+            {{ end }}
         </section>
          <!-- start of fade cover  -->
         <div class="fade-cover">
@@ -127,31 +143,24 @@
 
         <!-- Start of service description -->
         <section class="service-description content">
+                {{ $headless := .Site.GetPage "/editablepages" }}
+                {{ $reusablePages := $headless.Resources.Match "_inspection*" }} 
+                {{ range $reusablePages }}
                 <div class="section-title">
-                    <h3><span>Control de Calidad</span></h3>
+                    <h3><span>{{.Params.sectionTitle }}</span></h3>
                 </div>  
                 <div class="text-form">
                     <div class="section-text">
-                        <p>El control de calidad en los materiales y procesos de construcción es importante para poder asegurar la durabilidad, calidad, y apariencia del diseño deseado. El producto final debe satisfacer las necesidades tanto del usuario como del cliente.<br><br>
-
-                                Hacemos énfasis en el uso de medidas estrictas, el adherimiento a las más altas normas internacionales como el ISO 17025, tecnología de calidad y personal debidamente capacitado para garantizar una entrega rápida y de excelente calidad.<br>
+                        <p>{{ .Content }}</p>
                                 
-                                Nuestro equipo de técnicos certificados por el <a target="_blank" href="https://www.concrete.org/">American Concrete Institute</a> cuenta con las siguientes certificaciones</p>
                         <ul class="text-ul-links">
-                            <li><a target="_blank" href="https://www.concrete.org/certification/certificationprograms.aspx?m=details&pgm=Laboratory%20Concrete%20Testing&cert=Concrete%20Laboratory%20Testing%20Technician%20-%20Level%201">ACI     TÉCNICO DE PRUEBAS DE LABORATORIO DE CONCRETO NIVEL 1</a>
-                                <span><p>Certificación que garantiza el conocimiento y habilidad para realizar, registrar y reportar adecuadamente los resultados de una variedad de procedimientos de laboratorio referentes al concreto y sus agregados.</p></span>
+                            {{ range .Params.certificates }}
+                            <li><a target="_blank" href="{{ .linkc }}">{{ .namec }}</a>
+                                <span><p>{{ .descriptionc }}</p></span>
 
                             </li>
-                            <li><a target="_blank" href="https://www.concrete.org/certification/certificationprograms.aspx?m=details&pgm=Aggregate%20Testing&cert=Aggregate%20Testing%20Technician%20-%20Level%201">ACI TÉCNICO DE PRUEBAS DE AGREGADOS NIVEL 1</a>
-                                <span><p>Certificación que garantiza el conocimiento y habilidad para realizar, registrar y reportar adecuadamente los resultados de una variedad de procedimientos de laboratorio y de campo referentes a los agregados del concreto.</p></span>
-                            </li>
-                            <li><a target="_blank" href="https://www.concrete.org/certification/certificationprograms/m/details/pgm/laboratory%20concrete%20testing&cert=concrete%20strength%20testing%20technician">ACI TÉCNICO DE PRUEBAS DE RESISTENCIA DEL CONCRETO NIVEL 1</a>
-                                <span><p>Certificación que garantiza el conocimiento y habilidad para realizar, registrar y reportar adecuadamente los resultados de cuatro procedimientos básicos para determinar la resistencia a flexión y compresión del concreto.</p></span>
-                            </li>
-                            <li><a target="_blank" href="https://www.concrete.org/certification/certificationprograms/m/details/pgm/field%20concrete%20testing&cert=concrete%20field%20testing%20technician%20-%20grade%20i">ACI TÉCNICO DE PRUEBAS DE CAMPO EN CONCRETO GRADO 1</a>
-                                <span><p>Certificación que garantiza el conocimiento y habilidad para realizar, registrar y reportar adecuadamente los resultados de siete pruebas de campo básicas en concreto recién mezclado.</p></span>
-                            </li>
-                            <li><a target="_blank" href="https://www.concrete.org/certification/certificationprograms.aspx?m=details&pgm=Field%20Concrete%20Testing&cert=Self-Consolidating%20Concrete%20Testing%20Technician">ACI CONCRETE FIELD TESTING TECHNICIAN GRADE 2</a></li>
+                            {{ end }}
+                            
                         </ul>
                     </div>
                     <div class="form3">  
@@ -194,17 +203,18 @@
             <div class="section-title">
                 <h3><span>CALIDAD ASEGURADA POR</span></h3>
             </div>
+            {{ $headless := .Site.GetPage "/editablepages" }}
+            {{ $reusablePages := $headless.Resources.Match "_inspection*" }} 
+            {{ range $reusablePages }}
             <div class="certificates-container" data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom" data-aos-easing="ease-out" data-aos-duration="900">
-                <img src="/images/aci.svg" alt="american concrete institute" class="certificate">
-                <img src="/images/asce.svg" alt="american society of civil engineers" class="certificate">
-                <img src="/images/iso.svg" alt="iso" class="certificate">
-                <img src="/images/astm.svg" alt="astm international" class="certificate">
-                <img src="/images/nec.svg" alt="norma ecuatoriana de la construccion" class="certificate">
-                <img src="/images/inen.svg" alt="instituto ecuatoriana de normalizacion" class="certificate">
+                {{ range .Params.certificateImages }}
+                <img src="{{ . }}" alt="american concrete institute" class="certificate">
+                {{ end }}
             </div>
+            {{ end }}
         </section>
         <!-- End of certifications -->
-
+        {{ end }}
         <!-- Double banner -->
         <section class="full-width">
             <div class="double-banner banner2">

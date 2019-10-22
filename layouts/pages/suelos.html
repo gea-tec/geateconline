@@ -51,17 +51,21 @@
                                 <span class="hamburger-inner"></span>
                             </span>
                         </button>
-                        <div class="animated-social header-social">
-                            <a class="btn-social" href="#">
+                        {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+                        {{ range $reusablePages }}
+                        <div class="animated-social  header-social">
+                            <a class="btn-social" href="{{ .Params.lnlink }}">
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a class="btn-social" href="#">
+                            <a class="btn-social" href="{{ .Params.glink }}">
                                 <i class="fa fa-google-plus" aria-hidden="true"></i>
                             </a>
-                            <a class="btn-social" href="#">
+                            <a class="btn-social" href="{{ .Params.fblink }}">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
                         </div>
+                        {{ end }}
                         <section id="navFullsize" class="nav-container second-nav">
                             <nav>
                                 <ul class="change-link-color">
@@ -105,17 +109,21 @@
                     <li><a href="/contact/">Contacto</a></li>
                 </ul>
             </nav>
+            {{ $headless := .Site.GetPage "/editablepages" }}
+            {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+            {{ range $reusablePages }}
             <div class="animated-social">
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.lnlink }}">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.glink }}">
                     <i class="fa fa-google-plus" aria-hidden="true"></i>
                 </a>
-                <a class="btn-social" href="#">
+                <a class="btn-social" href="{{ .Params.fblink }}">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
             </div>
+            {{ end }}
         </section>
          <!-- start of fade cover  -->
         <div class="fade-cover">

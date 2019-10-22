@@ -39,6 +39,19 @@ collections:
         widget: "list"
         field: {label: (Se recomienda usar iconos con fondo transparente y de color "#4d4d4d"), name: image, widget: image}
       - {label: "Series", name: "series", widget: "hidden", default: "home"}
+  
+  - name: "social"
+    label: "Social"
+    folder: "content/editablepages"
+    create: false
+    delete: false
+    filter: {field: "series", value: "_social"}
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Tìtulo", name: "title", widget: "string", required: true}
+      - {label: "Link de Facebook", name: "fblink", widget: "string", required: true}
+      - {label: "Link de Google Plus", name: "glink", widget: "string", required: true}
+      - {label: "Link de Linkd In", name: "lnlink", widget: "string", required: true}
 
   - name: "bannerslider"
     label: "Slider de Banner"
@@ -258,7 +271,8 @@ collections:
   - name: "fiscalizacion"
     label: "Fiscalización"
     folder: "content/editablepages"
-    create: true
+    create: false
+    delete: false
     filter: {field: "series", value: "_inspection"}
     preview_path: "/fiscalizacion/"
     slug: "{{series}}-{{year}}-{{slug}}"

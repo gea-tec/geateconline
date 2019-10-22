@@ -78,17 +78,21 @@
                                 <span class="hamburger-inner"></span>
                                 </span>
                             </button>
+                            {{ $headless := .Site.GetPage "/editablepages" }}
+                            {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+                            {{ range $reusablePages }}
                             <div class="animated-social  header-social">
-                                    <a class="btn-social" href="#">
+                                    <a class="btn-social" href="{{ .Params.lnlink }}">
                                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                                     </a>
-                                    <a class="btn-social" href="#">
+                                    <a class="btn-social" href="{{ .Params.glink }}">
                                         <i class="fa fa-google-plus" aria-hidden="true"></i>
                                     </a>
-                                    <a class="btn-social" href="#">
+                                    <a class="btn-social" href="{{ .Params.fblink }}">
                                         <i class="fa fa-facebook" aria-hidden="true"></i>
                                     </a>
                             </div>
+                            {{ end }}
                             <section id="navFullsize" class="nav-container">
                                 <nav>
                                     <ul>
@@ -132,17 +136,21 @@
                         <li><a href="/contact/">Contacto</a></li>
                     </ul>
                 </nav>
+                {{ $headless := .Site.GetPage "/editablepages" }}
+                {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+                {{ range $reusablePages }}
                 <div class="animated-social">
-                        <a class="btn-social" href="#">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a class="btn-social" href="#">
-                            <i class="fa fa-google-plus" aria-hidden="true"></i>
-                        </a>
-                        <a class="btn-social" href="#">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                    <a class="btn-social" href="{{ .Params.lnlink }}">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn-social" href="{{ .Params.glink }}">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn-social" href="{{ .Params.fblink }}">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>    
+                </div>
+                {{ end }}
             </section>
     <div class="head">
         <div class="head-content">
@@ -191,17 +199,21 @@
             <!-- Start of contact form container -->
             
             <section class="form1-container">
-                 <div class="animated-social no-display">
-                    <a class="btn-social" href="#">
+                {{ $headless := .Site.GetPage "/editablepages" }}
+                {{ $reusablePages := $headless.Resources.Match "_social*" }} 
+                {{ range $reusablePages }}
+                <div class="animated-social no-display">
+                    <a class="btn-social" href="{{ .Params.lnlink }}">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a class="btn-social" href="#">
+                    <a class="btn-social" href="{{ .Params.glink }}">
                         <i class="fa fa-google-plus" aria-hidden="true"></i>
                     </a>
-                    <a class="btn-social" href="#">
+                    <a class="btn-social" href="{{ .Params.fblink }}">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
-                </div>                        
+                </div>
+                {{ end }}                       
                 <div class="form1" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                     <h3>SOLICITA UNA COTIZACIÓN GRATIS</h3>
                     <p>Llena el formulario a continuación y estaremos en contacto en breve</p>
