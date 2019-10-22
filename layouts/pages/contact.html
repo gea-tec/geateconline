@@ -78,9 +78,9 @@
                                     <li class="sub-menu">
                                         <a id="sub" href="#">Servicios</a>
                                         <ul id="sub-menu-ul">
-                                            <li><a href="">Estudio de Suelos</a></li>
+                                            <li><a href="/suelos/">Estudio de Suelos</a></li>
                                             <li><a href="/lab/">Laboratorio</a></li>
-                                            <li><a href="">Consultoría</a></li>
+                                            <li><a href="/consultoria/">Consultoría</a></li>
                                             <li><a href="/fiscalizacion/">Fiscalización</a></li>
                                         </ul>
                                     </li>
@@ -99,19 +99,19 @@
         <section class="mobile-nav">
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/">Inicio</a></li>
                     <li id="mobile-sub-parent">
                         <a href="#">Servicios</a>
                         <ul id="mobile-sub">
-                                <li><a href="">Estudio de Suelos</a></li>
-                                <li><a href="">Laboratorio</a></li>
-                                <li><a href="">Consultoría</a></li>
-                                <li><a href="fiscal.html">Fiscalización</a></li>
+                                <li><a href="/suelos/">Estudio de Suelos</a></li>
+                                <li><a href="/lab/">Laboratorio</a></li>
+                                <li><a href="/consultoria/">Consultoría</a></li>
+                                <li><a href="/fiscalizacion/">Fiscalización</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="clients.html">Acceso Clientes</a></li>
-                    <li class="current-menu-item"><a href="#">Contacto</a></li>
+                    <li><a href="/clients/">Acceso Clientes</a></li>
+                    <li class="current-menu-item"><a href="/contact/">Contacto</a></li>
                 </ul>
             </nav>
             {{ $headless := .Site.GetPage "/editablepages" }}
@@ -183,27 +183,30 @@
                         <p>
                             Por favor contáctenos usando la información a continuación para mayor información sobre nuestros servicios.
                         </p>
-
+                        {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "_contact*" }} 
+                        {{ range $reusablePages }}
                         <span class="address">
                             <p>
-                                Calle Agustín Calapucha<br>
-                                Tena, Napo 150150<br>
-                                Ecuador
+                                    {{.Params.street }}<br>
+                                    {{.Params.city }} {{.Params.postCode }}<br>
+                                    {{.Params.country }}
                             </p>
                         </span>
 
                         <span class="phone">
                             <p>
-                                +593 995 850 844
+                                    {{.Params.phone }}
                             </p>
                         </span>
 
                         <span class="e-mail">
                             <p>
-                                <a href="mailto:alejandra.leon@gea-tec.com?subject=URG gea-tec.com">alejandra.leon@gea-tec.com</a>
+                                <a href="mailto:{{.Params.email }}?subject=URG gea-tec.com">{{.Params.email }}</a>
                             </p>
                         </span>
                     </div>
+                    {{ end }}
                 </div>
 
                 <div class="section-title">

@@ -72,9 +72,9 @@
                                     <li class="sub-menu current-menu-item">
                                         <a id="sub" href="#">Servicios</a>
                                         <ul id="sub-menu-ul">
-                                            <li><a href="">Estudio de Suelos</a></li>
+                                            <li><a href="/suelos/">Estudio de Suelos</a></li>
                                             <li class="current-submenu-item"><a href="/lab/">Laboratorio</a></li>
-                                            <li><a href="">Consultoría</a></li>
+                                            <li><a href="/consultoria/">Consultoría</a></li>
                                             <li><a href="/fiscalizacion/">Fiscalización</a></li>
                                         </ul>
                                     </li>
@@ -93,19 +93,19 @@
         <section class="mobile-nav">
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li id="mobile-sub-parent">
+                    <li><a href="/">Inicio</a></li>
+                    <li id="mobile-sub-parent" class="current-menu-item">
                         <a href="#">Servicios</a>
                         <ul id="mobile-sub">
-                                <li><a href="">Estudio de Suelos</a></li>
-                                <li><a href="">Laboratorio</a></li>
-                                <li><a href="">Consultoría</a></li>
-                                <li><a href="fiscal.html">Fiscalización</a></li>
+                                <li><a href="/suelos/">Estudio de Suelos</a></li>
+                                <li class="current-menu-item"><a href="/lab/">Laboratorio</a></li>
+                                <li><a href="/consultoria/">Consultoría</a></li>
+                                <li><a href="/fiscalizacion/">Fiscalización</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Blog</a></li>
-                    <li class="current-menu-item"><a href="#">Acceso Clientes</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="/clients/">Acceso Clientes</a></li>
+                    <li><a href="/contact/">Contacto</a></li>
                 </ul>
             </nav>
             {{ $headless := .Site.GetPage "/editablepages" }}
@@ -451,7 +451,7 @@
             <div class="double-banner banner3">
                 <div class="slogan">
                     <h1 data-aos="fade-up" data-aos-duration="600">Innovación. Rendimiento. Calidad</h1>
-                    <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><button class="btn4" >REVISA NUESTROS PRECIOS</button></div>
+                    <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><a href="/contact/"><button class="btn4" >CONSULTA NUESTROS PRECIOS</button></a></div>
                 </div>
                 <div class="picture" data-aos="fade-left" data-aos-duration="600">
                     {{ $headless := .Site.GetPage "/bannerslider" }}

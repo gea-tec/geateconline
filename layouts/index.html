@@ -125,9 +125,9 @@
                         <li id="mobile-sub-parent">
                             <a href="#">Servicios</a>
                             <ul id="mobile-sub">
-                                    <li><a href="">Estudio de Suelos</a></li>
+                                    <li><a href="/suelos/">Estudio de Suelos</a></li>
                                     <li><a href="/lab/">Laboratorio</a></li>
-                                    <li><a href="">Consultoría</a></li>
+                                    <li><a href="/consultoria/">Consultoría</a></li>
                                     <li><a href="/fiscalizacion/">Fiscalización</a></li>
                             </ul>
                         </li>
@@ -317,9 +317,11 @@
                     <h2>ESTUDIO DE SUELOS</h2>
                 </div>
                 <div class="card-back back1">
-                    <button class="btn3">
-                        CONOCER MÁS
-                    </button>
+                        <a href="/suelos/">
+                            <button class="btn3">
+                                CONOCER MÁS
+                            </button>
+                        </a>
                 </div>
             </div>
         </div>
@@ -360,9 +362,11 @@
                         <h2>CONSULTORÍA</h2>
                     </div>
                     <div class="card-back back4">
-                        <button class="btn3">
-                            CONOCER MÁS
-                        </button>
+                            <a href="/consultoria/">
+                                <button class="btn3">
+                                    CONOCER MÁS
+                                </button>
+                            </a>
                     </div>
                 </div>
         </div>
@@ -393,7 +397,7 @@
     <div class="double-banner banner1">
         <div class="slogan">
             <h1 data-aos="fade-up" data-aos-duration="600">Reputación <strong style="color: #4d4d4d;">sólida</strong> como el <strong style="color: #4d4d4d;">concreto</strong></h1>
-            <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><button class="btn4" >REVISA NUESTROS PRECIOS</button></div>
+            <div data-aos="zoom-in-right" data-aos-anchor-placement="top-bottom" data-aos-duration="600" data-aos-easing="ease-out"><a href="/contact/"><button class="btn4" >CONSULTA NUESTROS PRECIOS</button></a></div>
         </div>
         <div class="picture" data-aos="fade-left" data-aos-duration="600">
             {{ $headless := .Site.GetPage "/bannerslider" }}

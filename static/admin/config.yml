@@ -236,7 +236,7 @@ collections:
     preview_path: "/consultoria/"
     slug: "{{series}}-{{slug}}"
     editor:
-     preview: true
+     preview: false
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
@@ -277,7 +277,7 @@ collections:
     preview_path: "/fiscalizacion/"
     slug: "{{series}}-{{year}}-{{slug}}"
     editor:
-     preview: true
+     preview: false
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
@@ -296,3 +296,23 @@ collections:
         widget: "list"
         field: {label: (Se recomienda usar iconos con fondo transparente y de color "#4d4d4d"), name: image, widget: image}    
       - {label: "Series", name: "series", widget: "hidden", default: "_inspection"}
+  
+  - name: "contact"
+    label: "Contacto"
+    folder: "content/editablepages"
+    create: false
+    delete: false
+    filter: {field: "series", value: "_contact"}
+    preview_path: "/contact/"
+    slug: "{{series}}-{{year}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - {label: "Tìtulo", name: "title", widget: "string"}
+      - {label: "Calles", name: "street", widget: "string", required: true}
+      - {label: "Ciudad", name: "city", widget: "string", required: true
+      - {label: "Código Postal", name: "postCode", widget: "string", required: true}
+      - {label: "País", name: "country", widget: "string", required: true}
+      - {label: "Teléfono", name: "phone", widget: "string", required: true}
+      - {label: "Email", name: "email", widget: "string", required: true}
+      - {label: "Series", name: "series", widget: "hidden", default: "_contact"}
