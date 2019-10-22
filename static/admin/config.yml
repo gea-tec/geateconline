@@ -209,7 +209,23 @@ collections:
         widget: "list"
         field: {label: (Se recomienda usar iconos con fondo transparente y de color "#4d4d4d"), name: image, widget: image}
       - {label: "Series", name: "series", widget: "hidden", default: "estudios"}
-      
+  
+  - name: "consultingdescription"
+    label: "Consultoría: Descripción"
+    folder: "content/editablepages"
+    create: false
+    delete: false
+    filter: {field: "series", value: "_consulting"}
+    slug: "{{series}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
+      - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
+
   - name: "consulting"
     label: "Consultoría: Servicios"
     folder: "content/consulting"

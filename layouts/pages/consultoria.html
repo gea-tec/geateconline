@@ -1,8 +1,16 @@
 <!DOCTYPE html> 
 <html>
 <head>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "_consulting*" }} 
+    {{ range $reusablePages }}
 	<meta charset="UTF-8">
-    <title>Geatec Suelos y Hormigones</title>
+    <title>{{.Params.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="{{.Params.title }}" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
@@ -22,7 +30,7 @@
         </style>
     </noscript>
 </head>
-
+{{ end }}
 <body>
        <!-- ***** Preloader Start ***** -->
        {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
@@ -127,15 +135,17 @@
 
         <!-- Start of service description -->
         <section class="service-description content">
+                {{ $headless := .Site.GetPage "/editablepages" }}
+                {{ $reusablePages := $headless.Resources.Match "_consulting*" }} 
+                {{ range $reusablePages }}
                 <div class="section-title">
-                    <h3><span>Consultoría de Proyectos de Ingeniería Civil</span></h3>
+                    <h3><span>{{.Params.sectionTitle }}</span></h3>
                 </div>  
                 <div class="text-form">
                     <div class="section-text">
-                        <p><strong style="color: #00941f;">GEATEC Suelos y Hormigones</strong> cuenta con un laboratorio completamenta equipado para llevar a cabo una variedad de estudios de suelos geotécnicos para un amplio rango de clientela, desde compañías de construcción hasta personas naturales. Los estudios se llevan a cabo usando estándares de vanguardia<br><br>
-
-                                Nuestro exito es un resultado directo de la habilidad para proveer la más alta calidad de servicios geotécnicos in situ con profesionales experimentados y altamente calificados, asi mismo, usando la tecnología más avanzada. Todos nuestros equipos son sometidos a rigurosas pruebas y calibraciones periódicas de acuerdo a las normas mediante las cuales nos regimos estríctamente, impuestas a través de organismos nacionales e internacionales tales como <a href="https://www.astm.org/">American Society for Testing and Materials</a>, <a href="https://www.normalizacion.gob.ec/">Servicio Ecuatoriano de Normalización</a>, entre otras.<br>
+                        <p>{{ .Content }}</p>
                     </div>
+                    {{ end }}
                     <div class="form3">  
                             <div class="form1" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                                     <h3>SOLICITA UNA COTIZACIÓN GRATIS</h3>
