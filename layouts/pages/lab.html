@@ -1,8 +1,16 @@
 <!DOCTYPE html> 
 <html>
 <head>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "_lab*" }} 
+    {{ range $reusablePages }}
 	<meta charset="UTF-8">
-    <title>Geatec Suelos y Hormigones</title>
+    <title>{{.Params.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="{{.Params.title }}" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
@@ -21,7 +29,7 @@
         </style>
     </noscript>
 </head>
-
+{{ end }}
 <body>
        <!-- ***** Preloader Start ***** -->
        {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
@@ -125,18 +133,18 @@
         <!-- End of cover -->
         <!-- Start of service description -->
         <section class="service-description content">
+            {{ $headless := .Site.GetPage "/editablepages" }}
+            {{ $reusablePages := $headless.Resources.Match "_lab*" }} 
+            {{ range $reusablePages }}
             <div class="section-title">
-                <h3><span>Pruebas de laboratorio</span></h3>
+                <h3><span>{{.Params.sectionTitle }}</span></h3>
             </div>  
             <div class="text-form">
                 <div class="section-text">
-                    <p><strong style="color: #00941f;">GEATEC Suelos y Hormigones</strong> Pone a su disposición su laboratorio de pruebas de calidad de <strong style="color: #00941f;">suelos</strong>, <strong style="color: #00941f;">hormigones</strong> y <strong style="color: #00941f;">asfalto</strong>.
-                        
-                     <br>El cual tiene la capacidad de llevar a cabo una variedad extensa de pruebas en dichas áreas.
-                     <br><br>Nos regimos por todas las normas requeridas por instituciones públicas y privadas.
+                    <p>{{ .Content }}
 
                     </p>
-
+                    {{ end }}
                     <div class="service-features">
                         <div class="icon-card-container">
                             <div>
