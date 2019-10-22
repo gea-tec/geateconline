@@ -168,6 +168,22 @@ collections:
       - {label: "Laboratorio", name: "series", widget: "hidden", default: "hormigones"}
 
   - name: "estudiosuelos"
+    label: "Estudio de Suelos: Descripción"
+    folder: "content/editablepages"
+    create: false
+    delete: false
+    filter: {field: "series", value: "_suelos"}
+    slug: "{{series}}-{{slug}}"
+    editor:
+     preview: true
+    fields:
+      - {label: "Borrador", name: "draft", widget: "boolean", required: false}
+      - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
+      - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
+
+  - name: "estudiosuelos"
     label: "Estudio de Suelos: Servicios"
     folder: "content/estudiosuelos"
     create: true
