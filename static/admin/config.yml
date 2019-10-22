@@ -310,7 +310,7 @@ collections:
     fields:
       - {label: "Tìtulo", name: "title", widget: "string"}
       - {label: "Calles", name: "street", widget: "string", required: true}
-      - {label: "Ciudad", name: "city", widget: "string", required: true
+      - {label: "Ciudad", name: "city", widget: "string", required: true}
       - {label: "Código Postal", name: "postCode", widget: "string", required: true}
       - {label: "País", name: "country", widget: "string", required: true}
       - {label: "Teléfono", name: "phone", widget: "string", required: true}
