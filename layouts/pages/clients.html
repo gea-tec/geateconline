@@ -1,8 +1,16 @@
 <!DOCTYPE html> 
 <html>
 <head>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "_users*" }} 
+    {{ range $reusablePages }}
 	<meta charset="UTF-8">
-    <title>Geatec Suelos y Hormigones</title>
+    <title>{{.Params.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:site_name" content="{{.Params.title }}" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
@@ -25,7 +33,7 @@
         </style>
     </noscript>
 </head>
-
+{{ end }}
 <body>
     <!-- ***** Preloader Start ***** -->
     {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
@@ -129,8 +137,11 @@
         <!-- End of cover -->
         <!-- Start of clients container -->
         <section class="content clients-page">
-            <h3><strong style="color: #00941f;">GEATEC</strong> brinda servicios accesibles y de calidad, por eso nuestros clientes pueden acceder a documentos importantes en cualquier momento a través de nuestra plataforma digital.<br><br>
-            Digite su nombre a continuación, haga click en acceder e ingrese la clave recibida a través de su correo electrónico.</h3>
+            {{ $headless := .Site.GetPage "/editablepages" }}
+            {{ $reusablePages := $headless.Resources.Match "_users*" }} 
+            {{ range $reusablePages }}
+            <h3>{{ .Content }}</h3>
+            {{ end }}
             <div class="search-box-container">
                 <div id="users">
 

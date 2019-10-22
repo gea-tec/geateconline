@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:site_name" content="GEATEC Suelos y Hormigones" />
+    <meta property="og:site_name" content="{{.Params.title }}" />
 	<meta property="og:title" content="{{.Params.title }}" />
 	<meta property="og:description" content="{{.Params.description }}"/>
 	<meta name="description" content="{{.Params.description }}"/>
@@ -364,14 +364,15 @@
     <div class="section-title">
         <h3><span>CALIDAD ASEGURADA POR</span></h3>
     </div>
+    {{ $headless := .Site.GetPage "/editablepages" }}
+    {{ $reusablePages := $headless.Resources.Match "home*" }} 
+    {{ range $reusablePages }}
     <div class="certificates-container" data-aos="zoom-in-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-out" data-aos-duration="1000">
-        <img src="/images/aci.svg" alt="american concrete institute" class="certificate">
-        <img src="/images/asce.svg" alt="american society of civil engineers" class="certificate">
-        <img src="/images/iso.svg" alt="iso" class="certificate">
-        <img src="/images/astm.svg" alt="astm international" class="certificate">
-        <img src="/images/nec.svg" alt="norma ecuatoriana de la construccion" class="certificate">
-        <img src="/images/inen.svg" alt="instituto ecuatoriana de normalizacion" class="certificate">
+        {{ range .Params.galleryCertificates }}
+        <img src="{{ . }}" alt="american concrete institute" class="certificate">
+        {{ end }}
     </div>
+    {{ end }}
 </section>
 <!-- End of certifications -->
 
