@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147433925-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-147433925-2');
-    </script>
+      <!-- Google analytics tag -->
+    {{ block "googleanlaytics" . }}{{ partial "google-analytics.html" .}}{{ end }}
+    <!-- end of tag -->
     {{ $headless := .Site.GetPage "/editablepages" }}
     {{ $reusablePages := $headless.Resources.Match "home*" }} 
     {{ range $reusablePages }}
@@ -430,6 +424,73 @@
     <script type="text/javascript" src="js/jquery3.4.1.-backstretch-aos-anime-swiper-shave.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     </div>
+    <!-- Rich Snippets -->
+    {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "_contact*" }} 
+                        {{ range $reusablePages }}
+	<script type="aplication/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Store",
+            "image": "https://www.gea-tec.com/images/logo-01.png",
+            "name": "GEATEC Suelos y Hormigones",
+            "email": "{{.Params.email }}",
+            "telephone": "{{.Params.phone }}",
+            "url": "https://gea-tec.com",
+            "address": {
+                "@type": "PostalAddress",
+            "addressLocality": "{{.Params.city }}",
+            "postalCode": "{{.Params.postCode }}",
+            "streetAddress": "{{.Params.street }}"
+          },
+        "sameAs": [
+            "https://www.facebook.com/Geatec-Suelos-y-Hormigones-2192403710976957/"
+        ],
+        "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "http://schema.org/Sunday"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00" ,
+          "dayOfWeek": "http://schema.org/Saturday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes":  "18:00:00",
+          "dayOfWeek": "http://schema.org/Thursday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek": "http://schema.org/Tuesday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek":  "http://schema.org/Friday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek": "http://schema.org/Monday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek":  "http://schema.org/Wednesday",
+          "opens": "08:30:00"
+        }
+      ]
+    }
+    </script>	
+    {{ end }}
   </body>
   
 </html>

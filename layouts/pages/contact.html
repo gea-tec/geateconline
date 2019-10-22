@@ -1,6 +1,9 @@
 <!DOCTYPE html> 
 <html>
 <head>
+      <!-- Google analytics tag -->
+      {{ block "googleanlaytics" . }}{{ partial "google-analytics.html" .}}{{ end }}
+      <!-- end of tag -->
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +14,8 @@
     <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
     <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
     <link rel="stylesheet" href="{{ "/css/swiper.aos.fonta.min.css" | relURL}}" />
-    
-    <script src="/js/jquery-3.4.1.min.js"></script>
-    {{ $title := site.Title }}
-    {{ if not .IsHome }}
-      {{ $title = printf "%s | %s" .Title site.Title }}
-    {{ end }}
     <title>
-        GEATEC Suelos y Hormigones
+        Contacto ! GEATEC Suelos y Hormigones
     </title>
     <noscript>
             <style>
@@ -194,7 +191,7 @@
 
                         <span class="phone">
                             <p>
-                                    {{.Params.phone }}
+                                    +{{.Params.phone }}
                             </p>
                         </span>
 
@@ -218,6 +215,73 @@
     </div>
     <script type="text/javascript" src="/js/jquery3.4.1.-backstretch-aos-anime-swiper-shave.min.js"></script>
     <script type="text/javascript" src="/js/custom.js"></script>
+    <!-- Rich Snippets -->
+    {{ $headless := .Site.GetPage "/editablepages" }}
+                        {{ $reusablePages := $headless.Resources.Match "_contact*" }} 
+                        {{ range $reusablePages }}
+	<script type="aplication/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Store",
+            "image": "https://www.gea-tec.com/images/logo-01.png",
+            "name": "GEATEC Suelos y Hormigones",
+            "email": "{{.Params.email }}",
+            "telephone": "{{.Params.phone }}",
+            "url": "https://gea-tec.com",
+            "address": {
+                "@type": "PostalAddress",
+            "addressLocality": "{{.Params.city }}",
+            "postalCode": "{{.Params.postCode }}",
+            "streetAddress": "{{.Params.street }}"
+          },
+        "sameAs": [
+            "https://www.facebook.com/Geatec-Suelos-y-Hormigones-2192403710976957/"
+        ],
+        "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "http://schema.org/Sunday"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00" ,
+          "dayOfWeek": "http://schema.org/Saturday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes":  "18:00:00",
+          "dayOfWeek": "http://schema.org/Thursday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek": "http://schema.org/Tuesday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek":  "http://schema.org/Friday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek": "http://schema.org/Monday",
+          "opens": "08:30:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "18:00:00",
+          "dayOfWeek":  "http://schema.org/Wednesday",
+          "opens": "08:30:00"
+        }
+      ]
+    }
+    </script>	
+    {{ end }}
     
 </body>
 

@@ -1,6 +1,9 @@
 <!DOCTYPE html> 
 <html>
 <head>
+      <!-- Google analytics tag -->
+      {{ block "googleanlaytics" . }}{{ partial "google-analytics.html" .}}{{ end }}
+      <!-- end of tag -->
     {{ $headless := .Site.GetPage "/editablepages" }}
     {{ $reusablePages := $headless.Resources.Match "_users*" }} 
     {{ range $reusablePages }}
@@ -179,6 +182,47 @@
     <script type="text/javascript" src="/js/jquery3.4.1.-backstretch-aos-anime-swiper-shave.min.js"></script>
     <script src="/js/simplebar-list.min.js"></script>
     <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="application/ld+json">
+
+        {
+    
+          "@context": "https://schema.org",
+    
+          "@type": "BreadcrumbList",
+    
+          "itemListElement": [{
+    
+            "@type": "ListItem",
+    
+            "position": 1,
+    
+            "item": {
+    
+              "@id": "https://gea-tec.com",
+    
+              "name": "GEATEC Suelos y Hormigones"
+    
+            }
+    
+          },{
+    
+            "@type": "ListItem",
+    
+            "position": 2,
+    
+            "item": {
+    
+              "@id": "https://gea-tec.com/clients",
+    
+              "name": "Acceso para Clientes"
+    
+            }
+    
+          }]
+    
+        }
+    
+        </script>	
 </body>
 
 </html>
