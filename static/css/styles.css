@@ -3271,6 +3271,12 @@ footer .fa {
     }
 }
 
+@media screen and (max-width: 570px) {
+    .lab-services {
+        justify-content: center;
+    }
+}
+
 .fa-angle-down {
     font-size: 4em !important;
     margin-bottom: -20px;
