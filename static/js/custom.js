@@ -201,7 +201,7 @@ hamburger.addEventListener("click", function() {
         prevEl: '.swiper-button-prev',
       },
     });
-
+    //swiper instance for estudio de suelos
     var interleaveOffset = 0.5;
 
     var swiperOptions = {
@@ -246,21 +246,21 @@ hamburger.addEventListener("click", function() {
     };
     
     var swiper = new Swiper('.s3', swiperOptions);
-  //   var swiper = new Swiper('.s3', {
-  //     centeredSlides: false,
-  //     loop: true,
-  //     slidesPerView: 1,
-  //     slidesPerGroup: 1,
-  //     effect: 'flip',
-  //     flipEffect: {
-  //       rotate: 30,
-  //       slideShadows: false,
-  //     },
-  //     autoplay: {
-  //         delay: 3000,
-  //         disableOnInteraction: false,
-  //     }
-  // });
+     var swiper4 = new Swiper('.s4', {
+       centeredSlides: false,
+       loop: true,
+       slidesPerView: 1,
+       slidesPerGroup: 1,
+       effect: 'flip',
+       flipEffect: {
+         rotate: 30,
+         slideShadows: false,
+       },
+       autoplay: {
+           delay: 3000,
+           disableOnInteraction: false,
+       }
+   });
 
   
 

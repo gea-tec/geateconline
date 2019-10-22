@@ -13,4 +13,4 @@ objectives:
   - Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque at
 series: estudios
 ---
-**La prueba de penetración estánda**r (SPT) o Standard Penetration Test es un método de prueba in situ comúnmente utilizado para determinar las propiedades de geotécnicas de los suelos subterráneos. Es una prueba simple y económica para estimar la densidad relativa de los suelos y los parámetros aproximados de resistencia al corte.
+**La prueba de penetración estándar** (SPT) o Standard Penetration Test es un método de prueba in situ comúnmente utilizado para determinar las propiedades de geotécnicas de los suelos subterráneos. Es una prueba simple y económica para estimar la densidad relativa de los suelos y los parámetros aproximados de resistencia al corte.

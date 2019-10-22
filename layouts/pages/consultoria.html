@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="{{ "/css/aos.min.css" | relURL}}" />
     
     <noscript>
-            <style>
-                [data-aos] {
-                    opacity: 1 !important;
-                    transform: translate(0) scale(1) !important;
-                }
-                #preloader {
-                display: none;
+        <style>
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
             }
-            </style>
-        </noscript>
+            #preloader {
+            display: none;
+                }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -115,11 +115,11 @@
         </div>
         <!-- End of fade cover -->
         <!-- Start of cover -->
-        <section class="service-cover estudiosuelos">
+        <section class="service-cover consultoria">
             <div class="head service-head" data-aos="fade-right" data-aos-duration="1000">
                <span>
-                   <h1>Estudio de Suelos</h1>
-                   <p><a href="/">Inicio</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Estudio de Suelos</a></p>
+                   <h1>Consultoría</h1>
+                   <p><a href="/">Inicio</a> <i class="fa fa-angle-right" aria-hidden="true"></i> <a href="#">Consultoría</a></p>
                 </span>
             </div>
         </section>
@@ -128,7 +128,7 @@
         <!-- Start of service description -->
         <section class="service-description content">
                 <div class="section-title">
-                    <h3><span>Laboratorio de Estudio de Suelos</span></h3>
+                    <h3><span>Consultoría de Proyectos de Ingeniería Civil</span></h3>
                 </div>  
                 <div class="text-form">
                     <div class="section-text">
@@ -171,51 +171,42 @@
                 
         </section>
         <!-- End of service description -->
-        {{ $headless := .Site.GetPage "/estudiosuelos" }}
-            {{ $reusablePages := $headless.Resources.Match "estudios*" }} 
+        {{ $headless := .Site.GetPage "/consulting" }}
+            {{ $reusablePages := $headless.Resources.Match "consulting*" }} 
             {{ range $reusablePages }}
-        <!-- Start of soil study service -->
-        <section class="full-width f1">
-            <section class="suelos-service content">
-                <div class="c1">
-                    <div class="slider-container">
-                        <div class="service-slider">
-                            <div class="swiper-container s3" data-aos="flip-up" data-aos-anchor-placement="center-bottom" data-aos-duration="900">
+        <!-- Start of consulting service -->
+        <section class="full-width f2">
+            <section class="consulting-service content">
+                <div class="consulting-title-text">
+                    <h2><span>{{.Title}}</span></h2>
+                    <p>{{ .Params.shortDescription }}</p>
+                </div>
+                <div class="consulting-img-content">
+                    <div class="consulting-slider-container">
+                        <div class="consulting-slider" data-aos="flip-up" data-aos-anchor-placement="center-bottom" data-aos-duration="900">
+                            <div class="s4">
                                 <div class="swiper-wrapper">
                                     {{ range .Params.galleryImages }}
-                                    <div class="swiper-slide">                                        
-                                        <div class="slide-inner" style="background: url({{ . }});"></div>
+                                    <div class="swiper-slide" style="background: url({{ . }});">                                        
                                     </div>
                                     {{ end }}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="service-content">
-                        <div class="title" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
-                            <h3><span>{{.Title}}</span></h3>
+                    <div class="consulting-content">
+                        <div class="consulting-description">
+                                {{ .Content }}
                         </div>
-                        <div class="description">
-                            <p>{{ .Content }}
-                            </p>
-                            <h4>¿QUÉ SE DETERMINA CON ESTA PRUEBA?</h4>
-                            <ul>
-                                {{ range .Params.objectives }}
-                                <li>{{ . }}</li>
-                                {{ end }}
-                            </ul>
+                        <h3>NORMAS QUE SE APLICAN:</h3>
+                        <div class="consulting-norms">
+                            {{ range .Params.normImages }}
+                            <div class="norm-img">
+                                <img src="{{ . }}" alt="norm">
+                            </div>
+                            {{ end }}
                         </div>
                     </div>
-                </div>
-                <div class="c3">
-                    <div>  </div><span>AFILIACIONES</span><div>  </div>
-                </div>
-                <div class="c2" data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="center-bottom">
-                    {{ range .Params.afiliateImages }}
-                    <div>
-                        <img src="{{ . }}" alt="certificate" class="certificate2">
-                    </div>
-                    {{ end }}
                 </div>
             </section>
         </section>
