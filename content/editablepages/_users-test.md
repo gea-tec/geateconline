@@ -1,7 +1,9 @@
 ---
-title: Geatec Suelos y Hormigones
-description: A ser definido
-series: _users
+title: Acceso para Clientes | Geatec Suelos y Hormigones
+description: >-
+  GEATEC brinda servicios accesibles y de calidad. Por eso, nuestros clientes
+  pueden acceder a documentos importantes a través de nuestra plataforma
+  digital.
 ---
 
 **GEATEC Suelos y Hormigones** brinda servicios accesibles y de calidad, por eso nuestros clientes pueden acceder a documentos importantes en cualquier momento a través de nuestra plataforma digital.
