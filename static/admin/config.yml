@@ -309,14 +309,10 @@ collections:
      preview: false
     fields:
       - {label: "Tìtulo", name: "title", widget: "string"}
-      - label: "Area"
-        name: "areaContact"
-        widget: "list"
-        fields: 
-          - {label: "Ciudad", name: "city", widget: "string", required: true}
-          - {label: "Calles", name: "street", widget: "string", required: true}
-          - {label: "Código Postal", name: "postCode", widget: "string", required: true}
-          - {label: "País", name: "country", widget: "string", required: true}      
-          - {label: "Teléfono", name: "phone", widget: "string", required: true}
+      - {label: "Calles", name: "street", widget: "string", required: true}
+      - {label: "Ciudad", name: "city", widget: "string", required: true}
+      - {label: "Código Postal", name: "postCode", widget: "string", required: true}
+      - {label: "País", name: "country", widget: "string", required: true}
+      - {label: "Teléfono", name: "phone", widget: "string", required: true}
       - {label: "Email", name: "email", widget: "string", required: true}
       - {label: "Series", name: "series", widget: "hidden", default: "_contact"}
