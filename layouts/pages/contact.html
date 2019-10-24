@@ -181,21 +181,23 @@
                         {{ $headless := .Site.GetPage "/editablepages" }}
                         {{ $reusablePages := $headless.Resources.Match "_contact*" }} 
                         {{ range $reusablePages }}
+                        {{ range .Params.areaContact }}
                         <span class="address">
+                            <h4>{{ .city }}:</h4>
                             <p>
-                                    {{.Params.street }}<br>
-                                    {{.Params.city }} {{.Params.postCode }}<br>
-                                    {{.Params.country }}
+                                    {{ .street }}<br>
+                                    C.P: {{ .postCode }}<br>
+                                    {{ .country }}
                             </p>
                         </span>
 
                         <span class="phone">
                             <p>
-                                    +{{.Params.phone }}
+                                    +{{ .phone }}
                             </p>
                         </span>
-
-                        <span class="e-mail">
+                        {{ end }}
+                        <span style="" class="e-mail">
                             <p>
                                 <a href="mailto:{{.Params.email }}?subject=URG gea-tec.com">{{.Params.email }}</a>
                             </p>

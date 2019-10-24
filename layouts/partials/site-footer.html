@@ -3,9 +3,14 @@
         <section class="widgets"><article>
 
                 <h3><span>Contacto</span></h3>
-
-                <p>GEATEC Suelos y Hormigones<br><strong>Tena:</strong><br>Calle Agustín Calapucha<br>Tlf: +593 995 850 844<br>E-mail: <a href="mailto:alejandra.leon@gea-tec.com?subject=URG gea-tec.com">alejandra.leon@gea-tec.com</a></p>
-
+                {{ $headless := .Site.GetPage "/editablepages" }}
+                {{ $reusablePages := $headless.Resources.Match "_contact*" }} 
+                {{ range $reusablePages }}
+                {{ range .Params.areaContact }}
+                <p>GEATEC Suelos y Hormigones<br><strong>{{ .city }}:</strong><br>{{ .street }}<br>Tlf: +{{ .phone }}<br></p>
+                {{ end }}
+                E-mail: <a href="mailto:{{ .Params.email }}?subject=URG gea-tec.com">{{ .Params.email }}</a>
+                {{ end }}
             </article><article class="widget_links">
 
                 <h3><span>Servicios</span></h3>
