@@ -158,7 +158,7 @@
                             {{ range .Params.certificates }}
                             <li><a target="_blank" href="{{ .linkc }}">{{ .namec }}</a>
                                 <span><p>{{ .descriptionc }}</p></span>
-
+                                <p class="p-img"><img src="{{ .picturec }}" alt=""></p>
                             </li>
                             {{ end }}
                             
@@ -242,7 +242,6 @@
             </div>
         </section>
         <!-- End of double banner -->
-
         <!-- Start of Blog -->
         {{ block "blogentries" . }}{{ partial "blog-entries.html" .}}{{ end }}
         <section class="full-width">

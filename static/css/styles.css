@@ -232,10 +232,9 @@
 /*pre loarder*/
 #preloader {
     overflow: hidden;
-    background: #4d4d4d;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #0f9b0f, #4d4d4d);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #0f9b0f, #4d4d4d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #00941f;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to top, #0f9b0f, #4d4d4d); 
+    background: linear-gradient(to top, #0f9b0f, #4d4d4d); */
     left: 0;
     right: 0;
     top: 0;
@@ -1429,6 +1428,16 @@ a[target="_blank"]:after {
     text-decoration: none;
 }
 
+.text-ul-links img {
+    width: 70%;
+    min-width: 320px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
+}
+
+.p-img {
+    text-align: center;
+}
+
 .text-ul-links li a:hover {
     text-decoration: underline;
 }
@@ -1630,18 +1639,23 @@ a[target="_blank"]:after {
 
 .back1 {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/suelos.jpg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/suelos.jpg);
 }
 
 .back2 {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/lab.jpg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/lab.jpg);
 }
 
 .back3 {
-    background: linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/inspection.jpg);
+    background: linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url
+    (/images/inspection.jpg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/inspection.jpg);
 }
 
 .back4 {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/consulting.jpg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.50), rgba(0, 148, 31, 0.50)), url(/images/consulting.jpg);
 }
 
 .btn3 {
@@ -1762,17 +1776,20 @@ a[target="_blank"]:after {
 
 .banner3 .slogan {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/isometropolis-01.svg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/isometropolis-01.svg);
     background-attachment: fixed;
     background-size: auto 50%;
 }
 
 .banner4 .slogan {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/banner4.svg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/banner4.svg);
     background-size: cover;
 }
 
 .banner5 .slogan {
     background: linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/bannerconsulting.svg);
+    background: -webkit-linear-gradient(0deg, rgba(0, 148, 31, 0.5), rgba(0, 148, 31, 0.5)), url(/images/bannerconsulting.svg);
     background-size: cover;
 }
 
