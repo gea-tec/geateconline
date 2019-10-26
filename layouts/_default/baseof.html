@@ -54,52 +54,14 @@
     <main>
       {{ block "main" . }}{{ end }}
       
-      <section style="display:none;" class="section" id="blog">
-        <div class="container">
-            <!-- ***** Section Title Start ***** -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h2 class="section-title">Blog Digital</h2>
-                    </div>
-                </div>
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="center-text">
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Section Title End ***** -->
-            
-            <div class="myrow2" id="style-2">
-                {{ range .Pages }}
-                <div class="blog-item">
-                    <div class="blog-post-thumb">
-                        <div class="img">
-                            <img src="{{ with .Params.image }}{{ . }}{{ end }}" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h3>
-                                    <a href="{{.URL}}">{{.Title}}</a>
-                            </h3>
-                            <div class="text">
-                                    <p>{{.Description}}</p>
-                            </div>
-                            <a href="{{.URL}}" class="main-button">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-        </div>
-    </section>
+      
     <section class="fb-section">
       <div class="fb-share-button" 
         data-href="https://amazondigitalecuador.com{{.URL}}" 
         data-layout="button_count" data-size="large">
       </div>
       <div class="fb-comments" data-href="https://amazondigitalecuador.com" data-width="100%" data-numposts="7"></div>
-    </section>
-    <!-- ***** Blog End ***** -->
-    {{ block "contact" . }}{{ partial "contact.html" .}}{{ end }}
+    
     </main>
     <footer>
       <!-- some footer -->
