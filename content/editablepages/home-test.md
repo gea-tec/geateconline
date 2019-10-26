@@ -25,6 +25,9 @@ servicesContent: >-
   **Profesionales altamamente capacitados**, **Equipo de última generación** y
   **programas de cómputo con tecnología moderna** que garantizan la mejor
   calidad de servicios.
+
+
+  Tambien ofrecemos otros servicios
 galleryCertificates:
   - /images/uploads/aci.svg
   - /images/uploads/asce.svg
