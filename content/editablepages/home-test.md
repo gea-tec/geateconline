@@ -17,7 +17,7 @@ aboutContent: >-
   fugit ad qui possimus ex, vitae at voluptatum facere!
 
 
-  # 
+  ##  
 
 
   Lorem ipsum dolor sit amet consectetur, adipisicing elit.Nihil suscipit
