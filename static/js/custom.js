@@ -445,3 +445,11 @@ $(window).bind('scroll resize load', function() {
 
 });
 
+$(window).bind('load', function() {
+  var titles = document.getElementsByClassName("section-title");
+  for (var i = 0; i < titles.length; i += 1) {
+    if (titles[i].innerText == "") {
+      titles[i].style.display = "none";
+    }
+  }
+});
