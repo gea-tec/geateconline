@@ -25,7 +25,7 @@ collections:
      preview: true
     fields:
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - label: "Areas de especialidad"
         name: "areas"
         widget: "list"
