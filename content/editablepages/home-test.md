@@ -18,8 +18,7 @@ aboutContent: >-
 
 
 
-
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil suscipit
+  /\Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil suscipit
   accusantium doloribus a, tempora, ut earum perspiciatis rem nesciunt velit
   repellat labore minima pariatur exercitationem quisquam modi amet! Itaque,
   mollitia.
