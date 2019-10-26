@@ -11,8 +11,13 @@ areas:
   - CONSTRUCCIÓN
   - ESTUDIOS DE GEOLOGÍA E ING GEOTÉCNICA
 textSections:
-  - sectionTitle: Quiénes somos?
-    sectionContent: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed recusandae sint illo eveniet quaerat maxime, mollitia aperiam sunt quibusdam quis repudiandae fugit ad qui possimus ex, vitae at voluptatum facere!
+  - sectionContent: >-
+      **Lorem ipsum dolor sit amet consectetu**r, adipisicing elit. Sed
+      recusandae sint illo eveniet quaerat maxime, mollitia aperiam sunt
+      quibusdam quis repudiandae fugit ad qui possimus ex, vitae at voluptatum
+      facere!
+    sectionTitle: Quiénes somos?
+  - sectionContent: This is another paragraph
 servicesTitle: NUESTROS SERVICIOS
 servicesContent: >-
   **GEATEC SUELOS Y HORMIGONES** Cuenta con un **laboratorio especializado** en
