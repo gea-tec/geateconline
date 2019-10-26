@@ -12,13 +12,15 @@ areas:
   - ESTUDIOS DE GEOLOGÍA E ING GEOTÉCNICA
 aboutTitle: Quiénes somos?
 aboutContent: >-
-  >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed recusandae sint
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed recusandae sint
   illo eveniet quaerat maxime, mollitia aperiam sunt quibusdam quis repudiandae
   fugit ad qui possimus ex, vitae at voluptatum facere!
 
-  >
 
-  >Lorem ipsum dolor sit amet consectetur, adipisicing elit.Nihil suscipit
+  # 
+
+
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit.Nihil suscipit
   accusantium doloribus a, tempora, ut earum perspiciatis rem nesciunt velit
   repellat labore minima pariatur exercitationem quisquam modi amet! Itaque,
   mollitia.
