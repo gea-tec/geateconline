@@ -30,8 +30,12 @@ collections:
         name: "areas"
         widget: "list"
         field: {label: area, name: string, widget: string}
-      - {label: "Título de Acerca de Nosotros", name: "aboutTitle", widget: "string", default: "Quiénes somos?", required: true}
-      - {label: "Acerca de Nosotros", name: "aboutContent", widget: "markdown"}
+      - label: "Secciones de Texto"
+        name: "textSections"
+        widget: "list"
+        fields: 
+          - {label: "Título de Sección", name: sectionTitle, widget: string, required: false}
+          - {label: "Contenido de Sección", name: sectionContent, widget: markdown}
       - {label: "Título de Servicios", name: "servicesTitle", widget: "string", default: "NUESTROS SERVICIOS", required: true}
       - {label: "Nuestros servicios", name: "servicesContent", widget: "markdown"}
       - label: "Galleria"
