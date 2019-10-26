@@ -83,7 +83,7 @@ collections:
     fields:
       - {label: "Tìtulo", name: "title", widget: "string", required: true}
       - {label: "Fecha de Publicaciòn", name: "date", widget: "datetime"}
-      - {label: "Descripciòn", name: "description", widget: "string"}
+      - {label: "Descripciòn", name: "description", widget: "text"}
       - {label: "Imagen de Muestra", name: "image", widget: "image"}
       - {label: "Imagen de Portada", name: "thumbnail", widget: "image"}
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
@@ -103,7 +103,7 @@ collections:
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
   
   - name: "users"
@@ -118,7 +118,7 @@ collections:
     fields:
       - {label: "Nombre", name: "title", widget: "string", required: true}
       - {label: "Link", name: "link", widget: "string", required: true}
-      - {label: "Descripcion Adicional", name: "description", widget: "string", required: false}
+      - {label: "Descripcion Adicional (Privada)", name: "description", widget: "text", required: false}
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Usuarios", name: "series", widget: "hidden", default: "users"}
 
@@ -135,7 +135,7 @@ collections:
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
       - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
   
@@ -200,7 +200,7 @@ collections:
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
       - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
 
@@ -244,7 +244,7 @@ collections:
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
       - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
 
@@ -285,7 +285,7 @@ collections:
     fields:
       - {label: "Borrador", name: "draft", widget: "boolean", required: false}
       - {label: "Tìtulo", name: "title", widget: "string", default: "Geatec titulo de prueba", required: true}
-      - {label: "Descripción de página (Para buscador)", name: "description", widget: "string", required: true}
+      - {label: "Descripción de página (Para buscador)", name: "description", widget: "text", required: true}
       - {label: "Tìtulo de sección", name: "sectionTitle", widget: "string"}
       - {label: "Descripcion de servicio", name: "body", widget: "markdown", required: false}
       - label: "Certificados"
@@ -294,7 +294,7 @@ collections:
         fields: 
           - {label: Nombre del certificado, name: namec, widget: string}
           - {label: Link del certificado, name: linkc, widget: string}
-          - {label: Descripción del certificado, name: descriptionc, widget: string}
+          - {label: Descripción del certificado, name: descriptionc, widget: text}
       - label: "Imágenes de Certificados"
         name: "certificateImages"
         widget: "list"
