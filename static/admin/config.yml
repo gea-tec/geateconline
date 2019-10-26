@@ -295,6 +295,7 @@ collections:
           - {label: Nombre del certificado, name: namec, widget: string}
           - {label: Link del certificado, name: linkc, widget: string}
           - {label: Descripción del certificado, name: descriptionc, widget: text}
+          - {label: Imagen, name: picturec, widget: image}
       - label: "Imágenes de Certificados"
         name: "certificateImages"
         widget: "list"
