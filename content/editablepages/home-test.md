@@ -32,11 +32,7 @@ servicesContent: >-
   suelos, hormigones y el estudio de suelos para diferentes áreas.
   **Profesionales altamamente capacitados**, **Equipo de última generación** y
   **programas de cómputo con tecnología moderna** que garantizan la mejor
-  calidad de servicios.  
-
-
-  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-  doloremque laudantium, totam.
+  calidad de servicios.
 galleryCertificates:
   - /images/uploads/aci.svg
   - /images/uploads/asce.svg
