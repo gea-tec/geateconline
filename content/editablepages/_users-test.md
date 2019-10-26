@@ -4,6 +4,7 @@ description: >-
   GEATEC brinda servicios accesibles y de calidad. Por eso, nuestros clientes
   pueden acceder a documentos importantes a través de nuestra plataforma
   digital.
+series: _users
 ---
 
 **GEATEC Suelos y Hormigones** brinda servicios accesibles y de calidad, por eso nuestros clientes pueden acceder a documentos importantes en cualquier momento a través de nuestra plataforma digital.
