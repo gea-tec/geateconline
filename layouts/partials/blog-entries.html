@@ -9,7 +9,7 @@
                     <div class="swiper-slide">
                         <div class="blog-post-thumb">
                             <div class="img" style="background:url({{ with .Params.thumbnail }}{{ . }}{{ end }});">
-                                <p class="publish-date">{{.Date.Day}} {{.Date.Month}}, {{.Date.Year}}</p>
+                                <p class="publish-date">{{.Date.Day}} {{ index $.Site.Data.meses (printf "%d" .Date.Month) }}, {{.Date.Year}}</p>
                             </div>
                             <div class="blog-content">
                                 <h3>
@@ -21,7 +21,7 @@
                                         
                                 </div>
                                 <div class="btn-parent">
-                                    <a href="/" class="main-button">LEER MÁS</a>
+                                    <a href="{{.URL}}" class="main-button">LEER MÁS</a>
                                 </div>
                             </div>
                         </div>

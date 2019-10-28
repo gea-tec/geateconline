@@ -1,0 +1,12 @@
+<!-- Start of blog body-->
+<section class="blog-body">
+    <div class="post-container">
+      <h1>{{ .Title }}</h1>
+      <div style="background: url('{{ with .Params.image }}{{ . }}{{ end }}');background-size: cover;background-position: center;" class="blog-cover"><p class="publish-date-cover">{{.Date.Day}} {{ index $.Site.Data.meses (printf "%d" .Date.Month) }}, {{.Date.Year}}</p></div>
+      <span>{{ .Content }}</span>
+    </div>
+    <div class="fb-pagecontainer">
+      <div class="fb-page" data-href="https://www.facebook.com/amazondigitalecuador" data-tabs="timeline" data-width="" data-height="900px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/amazondigitalecuador" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/amazondigitalecuador">Amazon Digital</a></blockquote></div>
+    </div>
+</section>  
+<!-- end of blog body -->

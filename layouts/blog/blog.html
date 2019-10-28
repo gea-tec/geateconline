@@ -1,0 +1,185 @@
+<!DOCTYPE html> 
+<html>
+<head>
+      <!-- Google analytics tag -->
+      {{ block "googleanlaytics" . }}{{ partial "google-analytics.html" .}}{{ end }}
+      <!-- end of tag -->
+  
+	<meta charset="UTF-8">
+    <title>{{.Params.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="https://www.gea-tec.com/images/logo-01.png" />
+    <meta property="og:site_name" content="{{.Params.title }}" />
+	<meta property="og:title" content="{{.Params.title }}" />
+	<meta property="og:description" content="{{.Params.description }}"/>
+	<meta name="description" content="{{.Params.description }}"/>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="{{ "/css/styles.css" | relURL}}" />
+    <link rel="stylesheet" href="{{ "/css/swiper.aos.fonta.min.css" | relURL}}" />
+    <noscript>
+        <style>
+            [data-simplebar] {
+                overflow: auto;
+            }
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+            #preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    {{ block "loader" . }}{{ partial "loader.html" .}}{{ end }}
+    <div class="root blog-root">
+        <header>
+            <!-- Start of entire header -->
+            <section class="header-container">
+                <section class="main-header mh2">
+                    <p class="logo">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Logo Geatec">
+                        </a>
+                    </p>   
+                    
+                    <div class="social-nav social-header">
+                        <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                       
+                        <div class="animated-social  header-social">
+                            <a class="btn-social" href="{{ .Params.lnlink }}">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="{{ .Params.glink }}">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn-social" href="{{ .Params.fblink }}">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                      
+                        <section id="navFullsize" class="nav-container second-nav">
+                            <nav>
+                                <ul class="change-link-color">
+                                    <li><a href="/">Inicio</a></li>
+                                    <li class="sub-menu">
+                                        <a id="sub" href="#">Servicios</a>
+                                        <ul id="sub-menu-ul">
+                                            <li><a href="/suelos/">Estudio de Suelos</a></li>
+                                            <li><a href="/lab/">Laboratorio</a></li>
+                                            <li><a href="/consultoria/">Consultoría</a></li>
+                                            <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="current-menu-item"><a href="#">Blog</a></li>
+                                    <li><a href="/clients/">Acceso Clientes</a></li>
+                                    <li><a href="/contact/">Contacto</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                </section>
+                
+            </section>
+            <!-- End of entire header -->
+        </header>
+        <section class="mobile-nav">
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li id="mobile-sub-parent">
+                        <a href="#">Servicios</a>
+                        <ul id="mobile-sub">
+                                <li><a href="/suelos/">Estudio de Suelos</a></li>
+                                <li><a href="/lab/">Laboratorio</a></li>
+                                <li><a href="/consultoria/">Consultoría</a></li>
+                                <li><a href="/fiscalizacion/">Fiscalización</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="current-menu-item"><a href="/clients/">Acceso Clientes</a></li>
+                    <li><a href="/contact/">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="animated-social">
+                <a class="btn-social" href="{{ .Params.lnlink }}">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="{{ .Params.glink }}">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a class="btn-social" href="{{ .Params.fblink }}">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>
+          
+        </section>
+         <!-- start of fade cover  -->
+        <div class="fade-cover">
+            
+        </div>
+        <!-- End of fade cover -->
+        <section class="body-bg">
+        <!-- Start of blog body-->
+        {{ block "body" . }}{{ partial "blog-body.html" .}}{{ end }}
+        <!-- end of blog body -->
+    </section>
+
+        {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
+    </div>
+    <script type="text/javascript" src="/js/jquery3.4.1.-backstretch-aos-anime-swiper-shave.min.js"></script>
+    <script src="/js/simplebar-list.min.js"></script>
+    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="application/ld+json">
+
+        {
+    
+          "@context": "https://schema.org",
+    
+          "@type": "BreadcrumbList",
+    
+          "itemListElement": [{
+    
+            "@type": "ListItem",
+    
+            "position": 1,
+    
+            "item": {
+    
+              "@id": "https://gea-tec.com",
+    
+              "name": "GEATEC Suelos y Hormigones"
+    
+            }
+    
+          },{
+    
+            "@type": "ListItem",
+    
+            "position": 2,
+    
+            "item": {
+    
+              "@id": "{{ .URL }}",
+    
+              "name": "{{ .Title }}"
+    
+            }
+    
+          }]
+    
+        }
+    
+        </script>	
+</body>
+
+</html>
