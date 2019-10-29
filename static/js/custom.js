@@ -164,6 +164,14 @@ hamburger.addEventListener("click", function() {
   fadeCover.classList.toggle("active");
 });
 
+//for redirecting to blog
+var blogDirect = document.querySelector("#blogdirect");
+var blogIndirect = document.querySelector("#blogindirect");
+
+blogDirect.addEventListener("click", function() {
+  document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+});
+
 //Custom javascript for gea-tec.com
 
 //initialize and configure swiper instances
