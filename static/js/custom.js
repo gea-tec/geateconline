@@ -165,12 +165,24 @@ hamburger.addEventListener("click", function() {
 });
 
 //for redirecting to blog
-var blogDirect = document.querySelector("#blogdirect");
+
 var blogIndirect = document.querySelector("#blogindirect");
 
-blogDirect.addEventListener("click", function() {
-  document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-});
+const blogDirect = document.querySelectorAll(".blogdirect");
+const mobileNav = $(".mobile-nav");
+const fadecover = $(".fade-cover");
+for (const blogdirect of blogDirect) {
+  blogdirect.addEventListener('click', function(event) {
+    if (mobileNav.hasClass('active')) {
+      document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
+      mobileNav.removeClass('active');
+      fadecover.removeClass('active');
+    } else {
+      document.getElementById('blog').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'end' });
+    }
+  })
+}
+
 
 //Custom javascript for gea-tec.com
 
