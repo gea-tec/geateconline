@@ -487,4 +487,11 @@ $(window).bind('load', function() {
       titles[i].style.display = "none";
     }
   }
+
+  var blogPosts = $('.s2 .swiper-wrapper');
+
+  if (blogPosts[0].innerText == "") {
+    $('#blog').css({"display":"none"});
+  }
+
 });
