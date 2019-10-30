@@ -1815,6 +1815,8 @@ a[target="_blank"]:after {
 }
 .full-width  iframe {
     width: 100%;
+    display: none;
+
 }
 
 @media screen and (max-width: 1179px) {
@@ -2615,11 +2617,13 @@ footer .fa {
 
 .contact-page .section-title {
     margin-top: 40px;
+    display:none;
 }
 .contact-page iframe {
     width: 100%;
     margin-top: 10px;
     border: 2px solid #00941f !important;
+    display:none;
 }
 
 /*styles for clients access page*/
