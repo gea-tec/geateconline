@@ -492,6 +492,14 @@ $(window).bind('load', function() {
 
   if (blogPosts[0].innerText == "") {
     $('#blog').css({"display":"none"});
+    $('.blogdirect').css({"display":"none"});
+    $('.blogindirect').css({"display":"none"});
+  }
+
+  var isindirect = document.getElementsByClassName('blogindirect');
+
+  if (isindirect.length > 0) {
+    $('#blog').css({"display":"none"});
   }
 
 });

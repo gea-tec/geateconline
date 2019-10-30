@@ -177,7 +177,9 @@
             </div>
         </section>
         <!-- end of clients page -->
-
+        
+        {{ block "blogentries" . }}{{ partial "blog-entries.html" .}}{{ end }}
+    
         {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
     </div>
     <script type="text/javascript" src="/js/jquery3.4.1.-backstretch-aos-anime-swiper-shave.min.js"></script>
