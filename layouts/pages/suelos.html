@@ -269,9 +269,7 @@
 
         <!-- Start of Blog -->
         {{ block "blogentries" . }}{{ partial "blog-entries.html" .}}{{ end }}
-        <section class="full-width">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d1390.1848170603428!2d-77.81045166199002!3d-0.9846385972673649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d-0.9938300999999999!2d-77.81494529999999!4m3!3m2!1d-0.9841302!2d-77.8102086!5e0!3m2!1sen!2sec!4v1570006029076!5m2!1sen!2sec" width="760" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </section>
+        {{ block "maps" . }}{{ partial "maps.html" .}}{{ end }}
 
         <!-- End of blog -->
         {{ block "footer" . }}{{ partial "site-footer.html" .}}{{ end }}
