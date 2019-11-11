@@ -151,11 +151,11 @@
                         <!-- start of form2-->
                             <form method="POST" data-netlify="true" class="contact-form">
                                 
-                                <input name="name" placeholder="Nombre Completo" required>
+                                <input id="name" name="name" placeholder="Nombre Completo" required>
 
-                                <input name="phone" type="tel" placeholder="Teléfono" required>
+                                <input id="phone" name="phone" type="tel" placeholder="Teléfono" required>
                     
-                                <input name="email" type="email" placeholder="Email" required>
+                                <input id="email" name="email" type="email" placeholder="Email" required>
                 
                                 <select id ="topicList" name="theme" size="1">
                     
@@ -167,10 +167,14 @@
             
                                 </select>
 
-                                <textarea name="message" placeholder="Mensaje"></textarea>
+                                <textarea id="message" name="message" placeholder="Mensaje"></textarea>
                                 <div class="btn5">
                                     <input id="submit1" name="submit" type="submit" value="ENVIAR">
                                 </div>
+                                <div class="btn6">
+                                    <button id="submit2" onclick="WpMessage()">Enviar mensaje por WhatsApp</button>
+                                </div>
+
                             </form>
                             <!-- end of form -->
                         </div>

@@ -2630,6 +2630,26 @@ footer .fa {
     background-position: right;
 }
 
+#submit2 {
+    border: 2px solid #00941f;
+    background: none;
+    font-size: 0.7em;
+    width: 150px;
+    margin-top: 20px;
+    font-family: Lato;
+    text-transform: uppercase;
+    color: #00941f;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+}
+
+#submit2:hover {
+    background: #00941f;
+    color: #fff;
+}
+
 .clients-page {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;

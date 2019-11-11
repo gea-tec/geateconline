@@ -505,3 +505,24 @@ $(window).bind('load', function() {
   }
 
 });
+
+function WpMessage() {
+  
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var email = document.getElementById("email").value;
+  var topic = document.getElementById("topicList").value;
+  var message = document.getElementById("message").value;
+
+  var wpmessage = `Buen día, mi nombre es ${name}, y me contacto con respecto a ${topic}. ${message}. Mis detalles de contacto, telf: ${phone}, email: ${email}. Muchas gracias por su atención. `
+
+  if ( name == "" || phone == "" || email == "" || message == "") {
+    document.getElementById('elementID').click();
+  }
+
+  var url = `https://api.whatsapp.com/send?phone=593996705431&text=${wpmessage}&source=&data=`
+
+  var win = window.open(url, '_blank');
+  win.focus();
+
+}
