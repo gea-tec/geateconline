@@ -516,7 +516,7 @@ function WpMessage() {
 
   var wpmessage = `Buen día, mi nombre es ${name}, y me contacto con respecto a ${topic}. ${message}. Mis detalles de contacto, telf: ${phone}, email: ${email}. Muchas gracias por su atención. `
 
-  if ( name == "" || phone == "" || email == "" || message == "") {
+  if ( name == "" || phone == "" || email == "") {
     document.getElementById('elementID').click();
   }
 
