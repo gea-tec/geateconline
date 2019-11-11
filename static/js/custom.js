@@ -520,7 +520,7 @@ function WpMessage() {
     document.getElementById('elementID').click();
   }
 
-  var url = `https://api.whatsapp.com/send?phone=593996705431&text=${wpmessage}&source=&data=`
+  var url = `https://api.whatsapp.com/send?phone=593995850844&text=${wpmessage}&source=&data=`
 
   var win = window.open(url, '_blank');
   win.focus();
