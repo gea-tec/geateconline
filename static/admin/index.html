@@ -55,6 +55,7 @@
       var entry = this.props.entry;
       var image = entry.getIn(['data', 'image']);
       var bg = this.props.getAsset(image);
+      console.log(bg);
       return h('div', {"className": "lab-service-father"},
               h('div', {"className": "lab-service"},
                 h('div', {"className": "lab-service-img"},
