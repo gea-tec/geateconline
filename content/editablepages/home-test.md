@@ -12,19 +12,10 @@ areas:
   - ESTUDIOS DE GEOLOGÍA E ING GEOTÉCNICA
 textSections:
   - sectionContent: >-
-      **Lorem ipsum dolor sit amet consectetu**r, adipisicing elit. Sed
-      recusandae sint illo eveniet quaerat maxime, mollitia aperiam sunt
-      quibusdam quis repudiandae fugit ad qui possimus ex, vitae at voluptatum
-      facere!
-
-
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-      amet, consectetur
+      **GEATEC** es un laboratorio de suelos, concretos y pavimentos donde se
+      realizan ensayos de laboratorio y de campo para determinar las propiedades
+      físicas y mecánicas (estáticas y dinámicas) de los materiales utilizados
+      en la construcción de obras civiles.
     sectionTitle: Quiénes somos?
 servicesTitle: NUESTROS SERVICIOS
 servicesContent: >-
@@ -42,4 +33,3 @@ galleryCertificates:
   - /images/uploads/inen.svg
 series: home
 ---
-
