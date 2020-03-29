@@ -25,7 +25,8 @@
     _fetchAsset: function() {
       const path = this.props.entry.getIn(['data', 'image']);
       path &&
-        this.props.getAsset(path).then(value => {
+        this.props.getAsset(path)
+        .then(value => {
           if (this.subscribed) {
             this.setState({ src: value.toString() });
           }
