@@ -12,44 +12,6 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-    var myVar = setInterval(content, 5000)
-
-    function content() {
-
-      // 1. Translating top bar
-      var navCms = document.getElementsByClassName("ei6fm2r1");
-      var content = navCms[0].nextSibling;
-      var workflow = navCms[1].nextSibling;
-      var media = navCms[2].nextSibling;
-      var quickAddCont = document.getElementsByClassName("e16dayda3");
-      var collections = document.getElementsByClassName("el9l68m1");
-      var searchBar = document.getElementsByClassName("el9l68m3");
-
-
-        content.textContent = "Contenido";
-        workflow.textContent = "Flujo de Trabajo";
-        media.textContent = "Medios";
-        // 1.1 Quick add
-        
-        quickAddCont[0].textContent = "Crear Nuevo";
-        // 2. Sidebar
-          //2.1 Collections
-          
-          collections[0].textContent = "Categorías";
-          //2.2 Search bar text 
-          
-          searchBar[0].placeholder = "Buscar";
-          console.log("running");
-      
-
-      
-    }
-    
-    function stopFunction() {
-      clearInterval(myVar);
-    }
-  </script>
-  <script>
     var LabPreview = createClass({
       subscribed: true,
 
