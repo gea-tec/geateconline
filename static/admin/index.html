@@ -15,47 +15,14 @@
     var LabPreview = createClass({
       subscribed: true,
 
-    getInitialState: function() {
-      return {
-        src: '',
-      };
-    },
-
-    _fetchAsset: function() {
-      const path = this.props.entry.getIn(['data', 'image']);
-      path &&
-        this.props.getAsset(path).then(value => {
-          if (this.subscribed) {
-            this.setState({ src: value.toString() });
-          }
-        });
-    },
-
-    componentDidMount: function() {
-      this._fetchAsset();
-    },
-
-    componentWillUnmount: function() {
-      this.subscribed = false;
-    },
-
-    componentDidUpdate: function(prevProps) {
-      const prevPath = prevProps.entry.getIn(['data', 'image']);
-      const path = this.props.entry.getIn(['data', 'image']);
-      if (prevPath !== path || prevProps.getAsset !== this.props.getAsset) {
-        this._fetchAsset();
-      }
-    },
-
     render: function() {
       var entry = this.props.entry;
       var image = entry.getIn(['data', 'image']);
       var bg = this.props.getAsset(image);
-      console.log(this.state.src);
       return h('div', {"className": "lab-service-father"},
               h('div', {"className": "lab-service"},
                 h('div', {"className": "lab-service-img"},
-                h('img', {src: this.state.src},
+                h('img', {src: bg.toString()},
                 )),
                 h('div', {"className": "lab-service-text"},
                 h('h3', {"className": "lab-service-text-h3"},entry.getIn(['data', 'title'])),
