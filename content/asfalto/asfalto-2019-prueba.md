@@ -1,6 +1,6 @@
 ---
 title: prueba
-draft: true
+draft: false
 image: /images/uploads/bgslide1.jpg
 series: asfalto
 ---
